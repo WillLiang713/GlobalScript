@@ -520,8 +520,9 @@ const proxyGroups = [
         name: "Zoom",
         type: "select",
         proxies: [
+            "全局直连",
             "节点选择",
-            "手动选择",
+            "手动选择", 
             "延迟选优",
             "故障转移",
         ],
