@@ -17,7 +17,9 @@ const domesticNameservers = [
 ];
 // 国外DNS服务器，同上
 const foreignNameservers = [
-    "tls://dns.opendns.com", // OpenDNS
+    "tls://4.2.2.1", // Microsoft DNS
+    "tls://8.8.8.8", // Google DNS
+    "tls://9.9.9.9", // Quad9 DNS
 ];
 
 // 规则集通用配置
