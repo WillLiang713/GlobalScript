@@ -226,11 +226,6 @@ const regionConfig = [
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/jp.svg",
   },
   {
-    name: "🇰🇷 韩国 📶",
-    matcher: "韩|🇰🇷|kr|korea",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/kr.svg",
-  },
-  {
     name: "🇸🇬 新加坡 📶",
     matcher: "新加坡|🇸🇬|SG|狮城|Singapore",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/sg.svg",
@@ -244,125 +239,6 @@ const regionConfig = [
     name: "🇹🇼 台湾 📶",
     matcher: "台湾|🇹🇼|tw|taiwan|tai wan",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg",
-  },
-  {
-    name: "🇬🇧 英国 📶",
-    matcher: "英|🇬🇧|uk|united kingdom|great britain",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/gb.svg",
-  },
-  {
-    name: "🇫🇷 法国 📶",
-    matcher: "法国|🇫🇷|FR|France",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/fr.svg",
-  },
-  {
-    name: "🇩🇪 德国 📶",
-    matcher: "德国|🇩🇪|DE|germany",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/de.svg",
-  },
-  {
-    name: "🇵🇱 波兰 📶",
-    matcher: "波兰|🇵🇱|Poland|PL|Poland",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/pl.svg",
-  },
-  {
-    name: "🇳🇱 荷兰 📶",
-    matcher: "荷兰|🇳🇱|NL|Netherlands",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/nl.svg",
-  },
-  {
-    name: "🇮🇪 爱尔兰 📶",
-    matcher: "爱尔兰|🇮🇪|IE|Ireland",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/ie.svg",
-  },
-  {
-    name: "🇸🇪 瑞典 📶",
-    matcher: "瑞典|🇸🇪|SE|Sweden",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/se.svg",
-  },
-  {
-    name: "🇷🇺 俄罗斯 📶",
-    matcher: "俄罗斯|🇷🇺|RU|Russia",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/ru.svg",
-  },
-  {
-    name: "🇮🇹 意大利 📶",
-    matcher: "意大利|🇮🇹|IT|Italy",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/it.svg",
-  },
-  {
-    name: "🇪🇸 西班牙 📶",
-    matcher: "西班牙|🇪🇸|ES|Spain",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/es.svg",
-  },
-  {
-    name: "🇵🇹 葡萄牙 📶",
-    matcher: "葡萄牙|🇵🇹|PT|Portugal",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/pt.svg",
-  },
-  {
-    name: "🇹🇷 土耳其 📶",
-    matcher: "土耳其|🇹🇷|TR|Turkey",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tr.svg",
-  },
-  {
-    name: "🇦🇷 阿根廷 📶",
-    matcher: "阿根廷|🇦🇷|AR|Argentina",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/ar.svg",
-  },
-  {
-    name: "🇨🇦 加拿大 📶",
-    matcher: "加拿大|🇨🇦|CA|Canada",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/ca.svg",
-  },
-  {
-    name: "🇦🇺 澳大利亚 📶",
-    matcher: "澳大利亚|🇦🇺|AU|Australia",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/au.svg",
-  },
-  {
-    name: "🇮🇷 伊朗 📶",
-    matcher: "伊朗|🇮🇷|IR|Iran",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/ir.svg",
-  },
-  {
-    name: "🇮🇩 印度尼西 📶",
-    matcher: "印度尼西亚|印尼|🇮🇩|ID|Indonesia",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/id.svg",
-  },
-  {
-    name: "🇲🇾 马来西亚 📶",
-    matcher: "马来|🇲🇾|MY|Malaysia",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/my.svg",
-  },
-  {
-    name: "🇵🇭 菲律宾 📶",
-    matcher: "菲律宾|🇵🇭|PH|Philippines",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/ph.svg",
-  },
-  {
-    name: "🇮🇳 印度 📶",
-    matcher: "印度|🇮🇳|IN|India",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/in.svg",
-  },
-  {
-    name: "🇻🇳 越南 📶",
-    matcher: "越南|🇻🇳|VN|Vietnam",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/vn.svg",
-  },
-  {
-    name: "🇹🇭 泰国 📶",
-    matcher: "泰国|🇹🇭|TH|Thailand",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/th.svg",
-  },
-  {
-    name: "🇨🇳 中国 📶",
-    matcher: "中国|🇨🇳|CN|cn|china",
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/cn.svg",
-  },
-  {
-    name: "🌐 其他 📶",
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png",
   },
 ];
 
@@ -631,7 +507,15 @@ function addRegions(config) {
       regions.push(region.name);
     }
   } else {
-    let names = config.proxies.map((p) => p.name).filter(Boolean);
+    let names = config.proxies
+      .map((p) => p.name)
+      .filter(Boolean)
+      .filter(
+        (name) =>
+          !/流量|到期|剩余|套餐|expire|traffic|quota|剩余流量|有效期/i.test(
+            name
+          )
+      );
     if (names.length === 0) return;
     for (const region of regionConfig) {
       let proxies = [],
@@ -708,6 +592,19 @@ function main(config) {
       : 0;
   if (proxyCount === 0 && proxyProviderCount === 0) {
     throw new Error("配置文件中未找到任何代理");
+  }
+
+  // 过滤掉非指定地区节点，且排除流量到期类节点
+  if (config.proxies) {
+    config.proxies = config.proxies.filter(
+      (proxy) =>
+        /香港|HK|Hong Kong|HongKong|台湾|TW|Taiwan|tai wan|日本|JP|Japan|美国|US|United States|America|新加坡|SG|Singapore|狮城/i.test(
+          proxy.name
+        ) &&
+        !/流量|到期|剩余|套餐|expire|traffic|quota|剩余流量|有效期/i.test(
+          proxy.name
+        )
+    );
   }
 
   // 配置
