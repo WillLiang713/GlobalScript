@@ -43,6 +43,8 @@ const groupBaseOption = {
 const rules = [
   // 自定义规则
   ...customRules,
+  // 广告拦截
+  "RULE-SET,adblock,广告拦截",
   // 规则集
   "RULE-SET,ipdirect,全局直连,no-resolve",
   "RULE-SET,ipprivate,全局直连,no-resolve",
@@ -210,6 +212,12 @@ const ruleProviders = {
     behavior: "domain",
     url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tld-!cn.mrs",
     path: "./ruleset/tld-not-cn.mrs",
+  },
+  adblock: {
+    ...ruleProviderCommon,
+    behavior: "domain",
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/adblock.mrs",
+    path: "./ruleset/adblock.mrs",
   },
 };
 
@@ -415,6 +423,13 @@ const proxyGroups = [
     "include-all": true,
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
   },
+  {
+    ...groupBaseOption,
+    name: "广告拦截",
+    type: "select",
+    proxies: ["REJECT", "全局直连"],
+    icon: "https://img.icons8.com/color/48/000000/no-entry.png",
+  },
 ];
 
 // DNS配置
@@ -558,6 +573,7 @@ function addRegions(config) {
   const entries = config["proxy-groups"];
   for (const entry of entries) {
     if (!entry || !entry.proxies) continue;
+    if (entry.name === "广告拦截") continue; // 跳过广告拦截组
     if (entry.name === "节点选择") {
       if (entry.proxies.length > 1) {
         entry.proxies.splice(2, 0, "地区选择");
