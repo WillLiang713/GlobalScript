@@ -4,6 +4,6 @@
 # Version: 1.0.0
 
 payload:
-  - 'modelscope.net'
-  - 'steamserver.net'
-  - 'shengsuanyun.com'
+  - '+.modelscope.net'
+  - '+.steamserver.net'
+  - '+.shengsuanyun.com'
