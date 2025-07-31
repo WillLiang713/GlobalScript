@@ -4,7 +4,7 @@
 # Version: 1.0.0
 
 payload:
-  - '+.modelscope.net'
-  - '+.steamserver.net'
-  - '+.shengsuanyun.com'
-  - '+.cas-bridge.xethub'
+  - "+.modelscope.net"
+  - "+.steamserver.net"
+  - "+.shengsuanyun.com"
+  - "+.cas-bridge.xethub.hf.co"
