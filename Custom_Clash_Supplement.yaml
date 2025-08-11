@@ -4,12 +4,12 @@
 # Version: 1.0.0
 
 payload:
-  - '+.modelscope.net'
-  - '+.shengsuanyun.com'
-  - '+.xethub.hf.co'
-  - '+.chujingapp.com'
-  - '+.gboxlab.com'
-  - '+.unpkg.com'
-  - '+.lmstudio.ai'
-  - '+.hf-mirror.com'
-  - '+.context7.com'
+  # - '+.modelscope.net'
+  # - '+.shengsuanyun.com'
+  # - '+.xethub.hf.co'
+  # - '+.chujingapp.com'
+  # - '+.gboxlab.com'
+  # - '+.unpkg.com'
+  # - '+.lmstudio.ai'
+  # - '+.hf-mirror.com'
+  # - '+.context7.com'
