@@ -43,12 +43,10 @@ const groupBaseOption = {
 const rules = [
   // 自定义规则
   ...customRules,
-  // 广告拦截
-  "RULE-SET,adblock,广告拦截",
   // 规则集
-  "RULE-SET,ipdirect,全局直连,no-resolve",
-  "RULE-SET,ipprivate,全局直连,no-resolve",
-  "RULE-SET,telegramcidr,电报消息,no-resolve",
+  "RULE-SET,ipdirect,全局直连",
+  "RULE-SET,ipprivate,全局直连",
+  "RULE-SET,telegramcidr,电报消息",
   "RULE-SET,direct,全局直连",
   "RULE-SET,private,全局直连",
   "RULE-SET,google,谷歌服务",
@@ -58,6 +56,7 @@ const rules = [
   "RULE-SET,onedrive,Onedrive",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,ai,AI",
+  "RULE-SET,chatgpt,ChatGPT",
   "RULE-SET,youtube,YouTube",
   "RULE-SET,netflix_ip,Netflix",
   "RULE-SET,netflix_site,Netflix",
@@ -159,6 +158,12 @@ const ruleProviders = {
     url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.mrs",
     path: "./ruleset/ai.mrs",
   },
+  chatgpt: {
+    ...ruleProviderCommon,
+    behavior: "domain",
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/chatgpt.mrs",
+    path: "./ruleset/chatgpt.mrs",
+  },
   bilibili: {
     ...ruleProviderCommon,
     behavior: "domain",
@@ -213,12 +218,6 @@ const ruleProviders = {
     url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tld-!cn.mrs",
     path: "./ruleset/tld-not-cn.mrs",
   },
-  adblock: {
-    ...ruleProviderCommon,
-    behavior: "domain",
-    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/adblock.mrs",
-    path: "./ruleset/adblock.mrs",
-  },
 };
 
 // 地区配置
@@ -260,8 +259,6 @@ const proxyGroups = [
       "延迟选优",
       "手动选择",
       "故障转移",
-      "负载均衡(散列)",
-      "负载均衡(轮询)",
     ],
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png",
   },
@@ -271,6 +268,16 @@ const proxyGroups = [
     type: "select",
     "include-all": true,
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg",
+  },
+  {
+    ...groupBaseOption,
+    name: "🤖 ChatGPT 📶",
+    type: "url-test",
+    interval: test_interval,
+    tolerance: test_tolerance,
+    "include-all": true,
+    filter: "(?i)(gpt|chatgpt|openai)",
+    icon: "https://www.clashverge.dev/assets/icons/chatgpt.svg",
   },
   {
     ...groupBaseOption,
@@ -326,6 +333,13 @@ const proxyGroups = [
     name: "AI",
     type: "select",
     proxies: ["全局直连", "节点选择", "手动选择", "延迟选优", "故障转移"],
+    icon: "https://www.clashverge.dev/assets/icons/chatgpt.svg",
+  },
+  {
+    ...groupBaseOption,
+    name: "ChatGPT",
+    type: "select",
+    proxies: ["🤖 ChatGPT 📶", "节点选择", "手动选择"],
     icon: "https://www.clashverge.dev/assets/icons/chatgpt.svg",
   },
   {
@@ -386,22 +400,6 @@ const proxyGroups = [
   },
   {
     ...groupBaseOption,
-    name: "负载均衡(轮询)",
-    type: "load-balance",
-    strategy: "round-robin",
-    "include-all": true,
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg",
-  },
-  {
-    ...groupBaseOption,
-    name: "负载均衡(散列)",
-    type: "load-balance",
-    strategy: "consistent-hashing",
-    "include-all": true,
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/merry_go.svg",
-  },
-  {
-    ...groupBaseOption,
     name: "故障转移",
     type: "fallback",
     "include-all": true,
@@ -422,13 +420,6 @@ const proxyGroups = [
     tolerance: test_tolerance,
     "include-all": true,
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
-  },
-  {
-    ...groupBaseOption,
-    name: "广告拦截",
-    type: "select",
-    proxies: ["REJECT", "全局直连"],
-    icon: "https://img.icons8.com/color/48/000000/no-entry.png",
   },
 ];
 
@@ -573,7 +564,6 @@ function addRegions(config) {
   const entries = config["proxy-groups"];
   for (const entry of entries) {
     if (!entry || !entry.proxies) continue;
-    if (entry.name === "广告拦截") continue; // 跳过广告拦截组
     if (entry.name === "节点选择") {
       if (entry.proxies.length > 1) {
         entry.proxies.splice(2, 0, "地区选择");
