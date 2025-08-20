@@ -56,7 +56,7 @@ const rules = [
   "RULE-SET,onedrive,Onedrive",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,ai,AI",
-  "RULE-SET,chatgpt,ChatGPT",
+  "RULE-SET,chatgpt,OpenAI",
   "RULE-SET,youtube,YouTube",
   "RULE-SET,netflix_ip,Netflix",
   "RULE-SET,netflix_site,Netflix",
@@ -223,27 +223,27 @@ const ruleProviders = {
 // 地区配置
 const regionConfig = [
   {
-    name: "🇺🇸 美国 📶",
+    name: "美国",
     matcher: "美国|🇺🇸|US|United States|America",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/us.svg",
   },
   {
-    name: "🇯🇵 日本 📶",
+    name: "日本",
     matcher: "日本|🇯🇵|JP|Japan",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/jp.svg",
   },
   {
-    name: "🇸🇬 新加坡 📶",
+    name: "新加坡",
     matcher: "新加坡|🇸🇬|SG|狮城|Singapore",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/sg.svg",
   },
   {
-    name: "🇭🇰 香港 📶",
+    name: "香港",
     matcher: "香港|🇭🇰|HK|Hong Kong|HongKong",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/hk.svg",
   },
   {
-    name: "🇹🇼 台湾 📶",
+    name: "台湾",
     matcher: "台湾|🇹🇼|tw|taiwan|tai wan",
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg",
   },
@@ -271,12 +271,12 @@ const proxyGroups = [
   },
   {
     ...groupBaseOption,
-    name: "🤖 ChatGPT 📶",
+    name: "ChatGPT",
     type: "url-test",
     interval: test_interval,
     tolerance: test_tolerance,
     "include-all": true,
-    filter: "(?i)(gpt|chatgpt|openai)",
+    filter: "(gpt|chatgpt|openai|GPT|ChatGPT|Chatgpt|OpenAI)",
     icon: "https://www.clashverge.dev/assets/icons/chatgpt.svg",
   },
   {
@@ -333,13 +333,13 @@ const proxyGroups = [
     name: "AI",
     type: "select",
     proxies: ["全局直连", "节点选择", "手动选择", "延迟选优", "故障转移"],
-    icon: "https://www.clashverge.dev/assets/icons/chatgpt.svg",
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png",
   },
   {
     ...groupBaseOption,
-    name: "ChatGPT",
+    name: "OpenAI",
     type: "select",
-    proxies: ["🤖 ChatGPT 📶", "节点选择", "手动选择"],
+    proxies: ["ChatGPT", "节点选择", "手动选择"],
     icon: "https://www.clashverge.dev/assets/icons/chatgpt.svg",
   },
   {
@@ -515,13 +515,7 @@ function addRegions(config) {
   } else {
     let names = config.proxies
       .map((p) => p.name)
-      .filter(Boolean)
-      .filter(
-        (name) =>
-          !/流量|到期|剩余|套餐|expire|traffic|quota|剩余流量|有效期/i.test(
-            name
-          )
-      );
+      .filter(Boolean);
     if (names.length === 0) return;
     for (const region of regionConfig) {
       let proxies = [],
@@ -598,19 +592,6 @@ function main(config) {
       : 0;
   if (proxyCount === 0 && proxyProviderCount === 0) {
     throw new Error("配置文件中未找到任何代理");
-  }
-
-  // 过滤掉非指定地区节点，且排除流量到期类节点
-  if (config.proxies) {
-    config.proxies = config.proxies.filter(
-      (proxy) =>
-        /香港|HK|Hong Kong|HongKong|台湾|TW|Taiwan|tai wan|日本|JP|Japan|美国|US|United States|America|新加坡|SG|Singapore|狮城/i.test(
-          proxy.name
-        ) &&
-        !/流量|到期|剩余|套餐|expire|traffic|quota|剩余流量|有效期/i.test(
-          proxy.name
-        )
-    );
   }
 
   // 配置
