@@ -1,4 +1,4 @@
 payload:
   - "+.steamserver.net"
   - "+.linux.do"
-  # - "+.instcopilot-api.com"
+  - "+.instcopilot-api.com"
