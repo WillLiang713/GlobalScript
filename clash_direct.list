@@ -1,0 +1,5 @@
+; 自定义域名规则集
+; 格式: DOMAIN-SUFFIX,域名
+
+DOMAIN-SUFFIX,steamserver.net
+DOMAIN-SUFFIX,linux.do
