@@ -2,3 +2,4 @@ payload:
   - "+.steamserver.net"
   - "+.linux.do"
   - "+.tailscale.com"
+  - "+.instcopilot-api.com"
