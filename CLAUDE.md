@@ -82,3 +82,4 @@ JavaScript 脚本遵循模块化模式：
 - 图标 URL 使用 jsdelivr.net 或官方服务域名的 CDN 源
 - 规则提供者 URL 指向可靠的仓库（MetaCubeX、DustinWin）
 - 测试 URL 使用 Google 的 generate_204 端点以确保可靠性
+- 用中文回复
