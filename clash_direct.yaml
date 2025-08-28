@@ -1,6 +1,6 @@
 payload:
-  - "+.steamserver.net"
-  - "+.linux.do"
-  - "+.context7.com"
-  - "+.tavily.com"
-  - "+.ollama.com"
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,context7.com
+  - DOMAIN-SUFFIX,tavily.com
+  - DOMAIN-SUFFIX,ollama.com
