@@ -3,4 +3,4 @@ payload:
   - DOMAIN-SUFFIX,linux.do
   - DOMAIN-SUFFIX,context7.com
   - DOMAIN-SUFFIX,tavily.com
-  - DOMAIN-SUFFIX,ollama.com
+  - DOMAIN-SUFFIX,modelscope.net
