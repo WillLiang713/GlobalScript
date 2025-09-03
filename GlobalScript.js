@@ -51,7 +51,7 @@ const rules = [
   "RULE-SET,private,全局直连",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,apple,苹果服务",
-  "RULE-SET,bing,Bing",
+
   "RULE-SET,github,Github",
   "RULE-SET,onedrive,Onedrive",
   "RULE-SET,microsoft,微软服务",
@@ -116,12 +116,7 @@ const ruleProviders = {
     url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs",
     path: "./ruleset/apple.mrs",
   },
-  bing: {
-    ...ruleProviderCommon,
-    behavior: "domain",
-    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bing.mrs",
-    path: "./ruleset/bing.mrs",
-  },
+
   github: {
     ...ruleProviderCommon,
     behavior: "domain",
@@ -286,13 +281,7 @@ const proxyGroups = [
     proxies: ["全局直连", "节点选择", "手动选择", "延迟选优", "故障转移"],
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg",
   },
-  {
-    ...groupBaseOption,
-    name: "Bing",
-    type: "select",
-    proxies: ["全局直连", "节点选择", "手动选择", "延迟选优", "故障转移"],
-    icon: "https://www.bing.com/favicon.ico",
-  },
+
   {
     ...groupBaseOption,
     name: "Github",
