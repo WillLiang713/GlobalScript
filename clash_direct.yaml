@@ -8,5 +8,3 @@ payload:
   - DOMAIN-SUFFIX,dk-ai.top
   # 小黄鸭AI中转站域名
   - DOMAIN-SUFFIX,instcopilot-api.com
-  # 出境易APP
-  - DOMAIN-SUFFIX,chujingapp.com
