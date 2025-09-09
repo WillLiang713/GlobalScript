@@ -4,7 +4,7 @@ payload:
   - DOMAIN-SUFFIX,context7.com
   - DOMAIN-SUFFIX,tavily.com
   - DOMAIN-SUFFIX,modelscope.net
-  # 公司云服务器域名
-  - DOMAIN-SUFFIX,dk-ai.top
-  # 小黄鸭AI中转站域名
-  - DOMAIN-SUFFIX,instcopilot-api.com
+  # # 公司云服务器域名
+  # - DOMAIN-SUFFIX,dk-ai.top
+  # # 小黄鸭AI中转站域名
+  # - DOMAIN-SUFFIX,instcopilot-api.com
