@@ -1,8 +1,8 @@
 payload:
   - DOMAIN-SUFFIX,steamserver.net
-  - DOMAIN-SUFFIX,linux.do
-  - DOMAIN-SUFFIX,context7.com
-  - DOMAIN-SUFFIX,tavily.com
+  # - DOMAIN-SUFFIX,linux.do
+  # - DOMAIN-SUFFIX,context7.com
+  # - DOMAIN-SUFFIX,tavily.com
   # - DOMAIN-SUFFIX,modelscope.net
   # # 公司云服务器域名
   # - DOMAIN-SUFFIX,dk-ai.top
