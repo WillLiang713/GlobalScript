@@ -1,10 +1,11 @@
 payload:
+  # steam直连域名
   - DOMAIN-SUFFIX,steamserver.net
-  # - DOMAIN-SUFFIX,linux.do
-  # - DOMAIN-SUFFIX,context7.com
-  # - DOMAIN-SUFFIX,tavily.com
-  # - DOMAIN-SUFFIX,modelscope.net
-  # # 公司云服务器域名
-  # - DOMAIN-SUFFIX,dk-ai.top
-  # # 小黄鸭AI中转站域名
-  # - DOMAIN-SUFFIX,instcopilot-api.com
+  # linux.do直连域名
+  - DOMAIN-SUFFIX,linux.do
+  # context7.com直连域名
+  - DOMAIN-SUFFIX,context7.com
+  # tavily智搜直连域名
+  - DOMAIN-SUFFIX,tavily.com
+  # 小黄鸭AI中转站域名
+  - DOMAIN-SUFFIX,instcopilot-api.com
