@@ -6,4 +6,4 @@ payload:
   # tavily智搜直连域名
   - DOMAIN-SUFFIX,tavily.com
   # 小黄鸭AI中转站域名
-  - DOMAIN-SUFFIX,instcopilot-api.com
+  - DOMAIN-SUFFIX,duckcoding.com
