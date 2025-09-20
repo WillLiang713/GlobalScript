@@ -5,5 +5,3 @@ payload:
   - DOMAIN-SUFFIX,context7.com
   # tavily智搜直连域名
   - DOMAIN-SUFFIX,tavily.com
-  # 小黄鸭AI中转站域名
-  - DOMAIN-SUFFIX,duckcoding.com
