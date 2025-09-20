@@ -1,7 +1,3 @@
 payload:
   # steam直连域名
   - DOMAIN-SUFFIX,steamserver.net
-  # context7.com直连域名
-  - DOMAIN-SUFFIX,context7.com
-  # tavily智搜直连域名
-  - DOMAIN-SUFFIX,tavily.com
