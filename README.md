@@ -68,13 +68,13 @@ GlobalScript 是一个专为网络代理和优化设计的综合性解决方案�
 | 文件名 | 类型 | 功能描述 | 用途 |
 |--------|------|----------|------|
 | [`Custom_Clash.ini`](Custom_Clash.ini) | INI配置 | OpenClash 订阅转换模板，包含完整的规则集和代理组配置 | 用于 OpenClash 的订阅转换 |
-| [`Custom_Clash_Demo.ini`](Custom_Clash_Demo.ini) | INI配置 | 演示版配置模板，展示基本配置结构和参数说明 | 学习和参考配置格式 |
+| [`Custom_Clash_Simple.ini`](Custom_Clash_Simple.ini) | INI配置 | 精简版 OpenClash 订阅转换模板，规则集和代理组配置相对简洁 | 适用于日常使用，规则相对简洁但覆盖常用场景 |
 
 ### 版本选择建议
 
 | 用户类型 | 推荐文件 | 理由 |
 |----------|----------|------|
-| **新手用户** | `GlobalScript-Minimal.js` + `Custom_Clash_Demo.ini` | 配置简单，容易上手 |
+| **新手用户** | `GlobalScript-Minimal.js` + `Custom_Clash_Simple.ini` | 配置简单，容易上手 |
 | **进阶用户** | `GlobalScript.js` + `Custom_Clash.ini` | 功能完整，满足复杂需求 |
 | **开发者** | 全部文件 | 可以学习和自定义配置 |
 
