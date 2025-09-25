@@ -1,3 +1,5 @@
 payload:
   # steam直连域名
   - DOMAIN-SUFFIX,steamserver.net
+  # 毫秒镜像域名
+  - DOMAIN-SUFFIX,docker.1ms.run
