@@ -4,4 +4,4 @@ payload:
   # 毫秒镜像域名
   - DOMAIN-SUFFIX,docker.1ms.run
   # DockerHub CF域名
-  - production.cloudflare.docker.com
+  - DOMAIN-SUFFIX,production.cloudflare.docker.com
