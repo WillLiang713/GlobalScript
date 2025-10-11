@@ -6,4 +6,4 @@ payload:
   # DockerHub CF域名
   - DOMAIN-SUFFIX,production.cloudflare.docker.com
   # Xget加速域名
-  - DOMAIN-SUFFIX,xuc.xi-xu.me
+  - DOMAIN-SUFFIX,xget.xi-xu.me
