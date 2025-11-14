@@ -1,9 +1,7 @@
 payload:
-  # Steam直连域名
   - DOMAIN-SUFFIX,steamserver.net
-  # 毫秒镜像域名
   - DOMAIN-SUFFIX,docker.1ms.run
-  # DockerHub CF域名
   - DOMAIN-SUFFIX,production.cloudflare.docker.com
-  # Xget加速域名
   - DOMAIN-SUFFIX,xget.xi-xu.me
+  - DOMAIN-SUFFIX,api.kkyyxx.xyz
+  - DOMAIN-SUFFIX,x666.me
