@@ -1,5 +1,4 @@
 payload:
-  - DOMAIN-SUFFIX,steamserver.net
   - DOMAIN-SUFFIX,docker.1ms.run
   - DOMAIN-SUFFIX,production.cloudflare.docker.com
   - DOMAIN-SUFFIX,xget.xi-xu.me
