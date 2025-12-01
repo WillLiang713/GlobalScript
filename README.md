@@ -9,7 +9,7 @@
 
 GlobalScript 是一个专为 Clash 内核设计的配置方案，包含：
 
-- **📋 配置模板** - 适用于订阅转换和 OpenClash 的完整配置模板
+- **📋 配置模板** - 适用于订阅转换和 OpenClash 的完整/精简配置模板
 - **🔧 扩展脚本** - JavaScript 预处理脚本，用于节点智能分组和规则优化
 - **📦 规则集合** - 包含直连规则的 YAML 配置文件
 
@@ -17,7 +17,7 @@ GlobalScript 是一个专为 Clash 内核设计的配置方案，包含：
 
 - 🔧 **自定义代理规则配置** - 支持丰富的规则集和自定义规则
 - 🌐 **智能 DNS 解析** - 区分国内外 DNS，支持 DoH/DoT 协议
-- 🎯 **自动化地区节点分组** - 自动识别和分组不同地区节点（美国、日本、新加坡、香港、台湾）
+- 🎯 **自动化地区节点分组** - 自动识别和分组不同地区节点（美国、日本、新加坡、香港）
 - 📦 **丰富的规则集支持** - 集成主流服务规则（Google、Microsoft、Netflix 等）
 - 🚫 **智能节点过滤** - 自动过滤流量到期、套餐提示等无效节点
 - ⚖️ **多种负载均衡策略** - 支持轮询、散列、延迟选优等策略
@@ -37,7 +37,7 @@ GlobalScript 是一个专为 Clash 内核设计的配置方案，包含：
 1. **下载配置模板**
    ```bash
    # 下载完整版配置
-   wget https://raw.githubusercontent.com/your-repo/GlobalScript/main/Custom_Clash_Simple.ini
+   wget https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Custom_Clash_Simple.ini
    ```
 
 2. **配置预处理脚本（可选）**
@@ -60,7 +60,8 @@ GlobalScript 是一个专为 Clash 内核设计的配置方案，包含：
 
 | 文件名 | 说明 | 适用场景 |
 |--------|------|----------|
-| [Custom_Clash_Simple.ini](Custom_Clash_Simple.ini) | 订阅转换配置模板，包含完整的代理组、规则集和 DNS 配置 | 订阅转换服务、OpenClash |
+| [Custom_Clash_Simple.ini](Custom_Clash_Simple.ini) | 完整版订阅转换配置模板，包含丰富的代理组和规则集 | 订阅转换服务、OpenClash |
+| [Custom_Clash_Minimal.ini](Custom_Clash_Minimal.ini) | 精简版订阅转换配置模板，包含核心代理组和基础规则 | 需要轻量配置的场景 |
 
 ### 预处理脚本
 
@@ -72,15 +73,15 @@ GlobalScript 是一个专为 Clash 内核设计的配置方案，包含：
 
 | 文件名 | 说明 | 用途 |
 |--------|------|------|
-| [clash_direct.yaml](clash_direct.yaml) | 直连域名规则集，包含 Steam、Docker 镜像等国内可直连服务 | 作为 Clash 规则集引用 |
+| [clash_direct.yaml](clash_direct.yaml) | 直连域名规则集，包含 Docker 镜像等国内可直连服务 | 作为 Clash 规则集引用 |
 
 ## ⚙️ 核心配置
 
 ### 基本参数（脚本配置）
 
 ```javascript
-// 测试 URL（使用 Cloudflare 连通性检测）
-const test_url = "http://cp.cloudflare.com/generate_204";
+// 测试 URL（使用 Google 连通性检测）
+const test_url = "https://www.gstatic.com/generate_204";
 // 测试间隔（秒）
 const test_interval = 240;
 // 容忍延迟差（毫秒）
@@ -97,7 +98,6 @@ const test_tolerance = 80;
 - 🇯🇵 **日本** (JP, Japan)
 - 🇸🇬 **新加坡** (SG, Singapore, 狮城)
 - 🇭🇰 **香港** (HK, Hong Kong, HongKong)
-- 🇹🇼 **台湾** (TW, Taiwan)
 
 #### 过滤无效节点
 
@@ -110,21 +110,19 @@ const test_tolerance = 80;
 
 #### 国内 DNS
 
-- `tls://223.5.5.5` (阿里云 DNS)
+- `tls://223.5.5.5` (阿里云公共 DNS)
 
 #### 国外 DNS
 
-- `tls://4.2.2.1` (Level3 DNS)
 - `tls://8.8.8.8` (Google DNS)
-- `tls://9.9.9.9` (Quad9 DNS)
 
 ### 直连规则集
 
 [clash_direct.yaml](clash_direct.yaml) 包含以下直连规则：
 
-- **Steam 服务** - `steamserver.net`
 - **Docker 镜像** - `docker.1ms.run` (毫秒镜像)
 - **Cloudflare Docker** - `production.cloudflare.docker.com`
+- **其他服务** - `xget.xi-xu.me`, `api.kkyyxx.xyz`, `x666.me`, `2ksports.com`
 
 ## 🤝 贡献指南
 
