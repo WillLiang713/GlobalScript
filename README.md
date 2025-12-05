@@ -41,7 +41,7 @@ Clash 配置模板和预处理脚本，提供智能节点分组、规则优化�
 | [Custom_Clash_Simple.ini](Custom_Clash_Simple.ini) | 完整版配置模板 |
 | [Custom_Clash_Minimal.ini](Custom_Clash_Minimal.ini) | 精简版配置模板 |
 | [GlobalScript.js](GlobalScript.js) | 预处理脚本 |
-| [clash_direct.yaml](clash_direct.yaml) | 直连域名规则集 |
+| [Clash_Direct.list](Clash_Direct.list) | 直连域名规则集 |
 
 ## 配置说明
 
