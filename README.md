@@ -43,6 +43,11 @@ Clash 配置模板和预处理脚本，提供智能节点分组、规则优化�
 | [GlobalScript.js](GlobalScript.js) | 预处理脚本 |
 | [Clash_Direct.list](Clash_Direct.list) | 直连域名规则集 |
 
+### 订阅 Raw 地址
+
+- 完整版 `Custom_Clash_Simple.ini`：`https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Custom_Clash_Simple.ini`
+- 精简版 `Custom_Clash_Minimal.ini`：`https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Custom_Clash_Minimal.ini`
+
 ## 配置说明
 
 ### 节点过滤
