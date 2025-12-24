@@ -2,8 +2,6 @@
 
 Clash 配置模板和预处理脚本，提供智能节点分组、规则优化和 DNS 配置。
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
 ## 项目说明
 
 专为 Clash 内核设计的配置方案：
