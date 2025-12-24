@@ -8,7 +8,7 @@ Clash 配置模板和预处理脚本，提供智能节点分组、规则优化�
 
 专为 Clash 内核设计的配置方案：
 
-- 配置模板 - 完整版和精简版订阅转换模板
+- 配置模板 - 完整版订阅转换模板
 - 预处理脚本 - 自动节点分组和过滤
 - 规则集 - 直连域名规则
 
@@ -39,14 +39,12 @@ Clash 配置模板和预处理脚本，提供智能节点分组、规则优化�
 | 文件 | 说明 |
 |------|------|
 | [Custom_Clash_Simple.ini](Custom_Clash_Simple.ini) | 完整版配置模板 |
-| [Custom_Clash_Minimal.ini](Custom_Clash_Minimal.ini) | 精简版配置模板 |
 | [GlobalScript.js](GlobalScript.js) | 预处理脚本 |
 | [Clash_Direct.list](Clash_Direct.list) | 直连域名规则集 |
 
 ### 订阅 Raw 地址
 
 - 完整版 `Custom_Clash_Simple.ini`：`https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Custom_Clash_Simple.ini`
-- 精简版 `Custom_Clash_Minimal.ini`：`https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Custom_Clash_Minimal.ini`
 
 ## 配置说明
 
@@ -64,9 +62,3 @@ Clash 配置模板和预处理脚本，提供智能节点分组、规则优化�
 ## 许可证
 
 [MIT License](LICENSE)
-
-## 致谢
-
-- [MetaCubeX/mihomo](https://github.com/MetaCubeX/mihomo)
-- [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)
-- [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)
