@@ -1,0 +1,670 @@
+# Clash 配置文件 (YAML格式)
+# 适用于 OpenClash 和 Clash 核心
+# 包含常用的分流规则和代理组配置
+
+proxy-groups:
+  # 手动选择代理组 - 用户可以手动切换代理节点
+  - name: 🤚 手动选择
+    type: select
+    include-all: true
+
+  # 自动选择代理组 - 根据延迟自动选择最优节点
+  - name: ♻️ 自动选择
+    type: url-test
+    include-all: true
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 故障转移代理组 - 按顺序选择可用节点，提高稳定性
+  - name: 🔯 故障转移
+    type: fallback
+    include-all: true
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 国外AI服务代理组
+  - name: 🪄 国外AI
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 国外开发服务代理组
+  - name: 🛠️ 国外开发
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # LinuxDo 网站代理组
+  - name: 📣 LINUXDO
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # GitHub 服务代理组
+  - name: 🐈‍⬛ GitHub
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # Zoom 视频会议代理组
+  - name: 💻 Zoom
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 苹果服务代理组
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 微软服务代理组
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 谷歌服务代理组
+  - name: 🟢 谷歌服务
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 谷歌FCM代理组
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 游戏平台代理组
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # YouTube 代理组
+  - name: 📺 YouTube
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # Netflix 代理组
+  - name: 🎬 Netflix
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 国外媒体代理组
+  - name: 🎥 国外媒体
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 社交通讯代理组
+  - name: 📲 社交通讯
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 成人内容代理组
+  - name: 🔞 成人内容
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇰🇷 韩国
+      - 🇺🇸 美国
+      - 🌐 其他
+
+  # 地区代理组 - 香港
+  - name: 🇭🇰 香港
+    type: url-test
+    include-all: true
+    filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 地区代理组 - 美国
+  - name: 🇺🇸 美国
+    type: url-test
+    include-all: true
+    filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 地区代理组 - 日本
+  - name: 🇯🇵 日本
+    type: url-test
+    include-all: true
+    filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 地区代理组 - 新加坡
+  - name: 🇸🇬 新加坡
+    type: url-test
+    include-all: true
+    filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 地区代理组 - 台湾
+  - name: 🇹🇼 台湾
+    type: url-test
+    include-all: true
+    filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 地区代理组 - 韩国
+  - name: 🇰🇷 韩国
+    type: url-test
+    include-all: true
+    filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 其他地区代理组
+  - name: 🌐 其他
+    type: url-test
+    include-all: true
+    filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # 直连代理组
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
+  # 漏网之鱼代理组
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+      - 🎯 全球直连
+      - 🤚 手动选择
+      - 🇭🇰 香港
+      - 🇺🇸 美国
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+      - 🇹🇼 台湾
+      - 🇰🇷 韩国
+      - 🌐 其他
+
+rule-providers:
+  # 局域网地址规则
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./ruleset/LocalAreaNetwork.list
+    interval: 86400
+    format: text
+
+  # 谷歌FCM规则
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+    path: ./ruleset/GoogleFCM.list
+    interval: 86400
+    format: text
+
+  # 谷歌中国服务规则
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./ruleset/GoogleCN.list
+    interval: 86400
+    format: text
+
+  # Steam中国规则
+  SteamCN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./ruleset/SteamCN.list
+    interval: 86400
+    format: text
+
+  # GitHub规则
+  Github:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Github.list
+    path: ./ruleset/Github.list
+    interval: 86400
+    format: text
+
+  # 国外开发服务规则
+  Developer:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Developer.list
+    path: ./ruleset/Developer.list
+    interval: 86400
+    format: text
+
+  # 国外AI服务规则
+  AI:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list
+    path: ./ruleset/AI.list
+    interval: 86400
+    format: text
+
+  # Zoom规则
+  Zoom:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Zoom.list
+    path: ./ruleset/Zoom.list
+    interval: 86400
+    format: text
+
+  # 游戏平台规则 - Steam
+  Steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+    path: ./ruleset/Steam.list
+    interval: 86400
+    format: text
+
+  # 游戏平台规则 - Epic
+  Epic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
+    path: ./ruleset/Epic.list
+    interval: 86400
+    format: text
+
+  # 游戏平台规则 - Origin
+  Origin:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list
+    path: ./ruleset/Origin.list
+    interval: 86400
+    format: text
+
+  # 游戏平台规则 - Sony
+  Sony:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list
+    path: ./ruleset/Sony.list
+    interval: 86400
+    format: text
+
+  # 游戏平台规则 - Nintendo
+  Nintendo:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
+    path: ./ruleset/Nintendo.list
+    interval: 86400
+    format: text
+
+  # YouTube规则
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+    path: ./ruleset/YouTube.list
+    interval: 86400
+    format: text
+
+  # Netflix规则
+  Netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+    path: ./ruleset/Netflix.list
+    interval: 86400
+    format: text
+
+  # 国外媒体规则
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./ruleset/ProxyMedia.list
+    interval: 86400
+    format: text
+
+  # 社交通讯规则 - Telegram
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./ruleset/Telegram.list
+    interval: 86400
+    format: text
+
+  # 社交通讯规则 - Twitter
+  Twitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Twitter.list
+    path: ./ruleset/Twitter.list
+    interval: 86400
+    format: text
+
+  # 社交通讯规则 - Facebook
+  Facebook:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Facebook.list
+    path: ./ruleset/Facebook.list
+    interval: 86400
+    format: text
+
+  # 社交通讯规则 - Instagram
+  Instagram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Instagram.list
+    path: ./ruleset/Instagram.list
+    interval: 86400
+    format: text
+
+  # 苹果服务规则
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./ruleset/Apple.list
+    interval: 86400
+    format: text
+
+  # 微软服务规则
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    interval: 86400
+    format: text
+
+  # 谷歌服务规则
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
+    path: ./ruleset/Google.list
+    interval: 86400
+    format: text
+
+  # 成人内容规则
+  Porn:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Porn.list
+    path: ./ruleset/Porn.list
+    interval: 86400
+    format: text
+
+  # 中国域名规则
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./ruleset/ChinaDomain.list
+    interval: 86400
+    format: text
+
+  # 中国公司IP规则
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./ruleset/ChinaCompanyIp.list
+    interval: 86400
+    format: text
+
+  # 下载工具规则
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+    path: ./ruleset/Download.list
+    interval: 86400
+    format: text
+
+  # 自定义直连规则
+  ClashDirect:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Direct.list
+    path: ./ruleset/ClashDirect.list
+    interval: 86400
+    format: text
+
+rules:
+  # 局域网地址 - 直连
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+
+  # 谷歌FCM
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+
+  # 国内常用服务 - 直连
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+
+  # LinuxDo 网站
+  - DOMAIN-SUFFIX,linux.do,📣 LINUXDO
+
+  # GitHub 服务
+  - RULE-SET,Github,🐈‍⬛ GitHub
+
+  # 国外开发服务
+  - RULE-SET,Developer,🛠️ 国外开发
+
+  # 国外AI服务
+  - RULE-SET,AI,🪄 国外AI
+
+  # 视频会议服务
+  - RULE-SET,Zoom,💻 Zoom
+
+  # 游戏平台服务
+  - RULE-SET,Steam,🎮 游戏平台
+  - RULE-SET,Epic,🎮 游戏平台
+  - RULE-SET,Origin,🎮 游戏平台
+  - RULE-SET,Sony,🎮 游戏平台
+  - RULE-SET,Nintendo,🎮 游戏平台
+
+  # 流媒体服务
+  - RULE-SET,YouTube,📺 YouTube
+  - RULE-SET,Netflix,🎬 Netflix
+  - RULE-SET,ProxyMedia,🎥 国外媒体
+
+  # 社交通讯服务
+  - RULE-SET,Telegram,📲 社交通讯
+  - RULE-SET,Twitter,📲 社交通讯
+  - RULE-SET,Facebook,📲 社交通讯
+  - RULE-SET,Instagram,📲 社交通讯
+
+  # 国际大厂服务
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Google,🟢 谷歌服务
+
+  # 成人内容服务
+  - RULE-SET,Porn,🔞 成人内容
+
+  # 兜底规则 - 国内域名和IP直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+
+  # 下载工具直连
+  - RULE-SET,Download,🎯 全球直连
+
+  # 自定义直连域名规则
+  - RULE-SET,ClashDirect,🎯 全球直连
+
+  # 中国IP直连
+  - GEOIP,CN,🎯 全球直连
+
+  # 漏网之鱼 - 最终兜底规则
+  - MATCH,🐟 漏网之鱼
