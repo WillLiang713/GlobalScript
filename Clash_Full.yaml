@@ -49,237 +49,237 @@ proxy-groups:
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # LinuxDo 网站代理组
   - name: LINUXDO
     type: select
     icon: "https://linux.do/uploads/default/original/4X/6/a/6/6a6affc7b1ce8140279e959d32671304db06d5ab.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # GitHub 服务代理组
   - name: GitHub
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # Zoom 视频会议代理组
   - name: Zoom
     type: select
     icon: "https://www.zoom.com/favicon.ico"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 苹果服务代理组
   - name: 苹果服务
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 微软服务代理组
   - name: 微软服务
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 谷歌服务代理组
   - name: 谷歌服务
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 谷歌FCM代理组
   - name: 谷歌FCM
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 游戏平台代理组
   - name: 游戏平台
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # YouTube 代理组
   - name: YouTube
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # Netflix 代理组
   - name: Netflix
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 美国
+      - 其他
 
   # 国外媒体代理组
   - name: 国外媒体
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 社交通讯代理组
   - name: 社交通讯
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 成人内容代理组
   - name: 成人内容
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 地区代理组 - 香港
   - name: 香港
