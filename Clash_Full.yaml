@@ -4,13 +4,13 @@
 
 proxy-groups:
   # 手动选择代理组 - 用户可以手动切换代理节点
-  - name: 🤚 手动选择
+  - name: 手动选择
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"
     include-all: true
 
   # 自动选择代理组 - 根据延迟自动选择最优节点
-  - name: ♻️ 自动选择
+  - name: 自动选择
     type: url-test
     include-all: true
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
@@ -19,7 +19,7 @@ proxy-groups:
     tolerance: 50
 
   # 故障转移代理组 - 按顺序选择可用节点，提高稳定性
-  - name: 🔯 故障转移
+  - name: 故障转移
     type: fallback
     include-all: true
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png"
@@ -28,24 +28,24 @@ proxy-groups:
     tolerance: 50
 
   # 国外AI服务代理组
-  - name: 🪄 国外AI
+  - name: 国外AI
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Siri.png" 
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Siri.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
-      - 🇯🇵 日本
-      - 🇰🇷 韩国
-      - 🇺🇸 美国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 国外开发服务代理组
-  - name: 🛠️ 国外开发
+  - name: 国外开发
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
     proxies:
@@ -62,7 +62,7 @@ proxy-groups:
       - 🌐 其他
 
   # LinuxDo 网站代理组
-  - name: 📣 LINUXDO
+  - name: LINUXDO
     type: select
     icon: "https://linux.do/uploads/default/original/4X/6/a/6/6a6affc7b1ce8140279e959d32671304db06d5ab.png"
     proxies:
@@ -79,7 +79,7 @@ proxy-groups:
       - 🌐 其他
 
   # GitHub 服务代理组
-  - name: 🐈‍⬛ GitHub
+  - name: GitHub
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
     proxies:
@@ -96,7 +96,7 @@ proxy-groups:
       - 🌐 其他
 
   # Zoom 视频会议代理组
-  - name: 💻 Zoom
+  - name: Zoom
     type: select
     icon: "https://www.zoom.com/favicon.ico"
     proxies:
@@ -113,7 +113,7 @@ proxy-groups:
       - 🌐 其他
 
   # 苹果服务代理组
-  - name: 🍎 苹果服务
+  - name: 苹果服务
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
     proxies:
@@ -130,7 +130,7 @@ proxy-groups:
       - 🌐 其他
 
   # 微软服务代理组
-  - name: Ⓜ️ 微软服务
+  - name: 微软服务
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
     proxies:
@@ -147,7 +147,7 @@ proxy-groups:
       - 🌐 其他
 
   # 谷歌服务代理组
-  - name: 🟢 谷歌服务
+  - name: 谷歌服务
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
     proxies:
@@ -164,7 +164,7 @@ proxy-groups:
       - 🌐 其他
 
   # 谷歌FCM代理组
-  - name: 📢 谷歌FCM
+  - name: 谷歌FCM
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
     proxies:
@@ -181,7 +181,7 @@ proxy-groups:
       - 🌐 其他
 
   # 游戏平台代理组
-  - name: 🎮 游戏平台
+  - name: 游戏平台
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
     proxies:
@@ -198,7 +198,7 @@ proxy-groups:
       - 🌐 其他
 
   # YouTube 代理组
-  - name: 📺 YouTube
+  - name: YouTube
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     proxies:
@@ -215,7 +215,7 @@ proxy-groups:
       - 🌐 其他
 
   # Netflix 代理组
-  - name: 🎬 Netflix
+  - name: Netflix
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     proxies:
@@ -231,7 +231,7 @@ proxy-groups:
       - 🌐 其他
 
   # 国外媒体代理组
-  - name: 🎥 国外媒体
+  - name: 国外媒体
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png"
     proxies:
@@ -248,7 +248,7 @@ proxy-groups:
       - 🌐 其他
 
   # 社交通讯代理组
-  - name: 📲 社交通讯
+  - name: 社交通讯
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
     proxies:
@@ -265,7 +265,7 @@ proxy-groups:
       - 🌐 其他
 
   # 成人内容代理组
-  - name: 🔞 成人内容
+  - name: 成人内容
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
     proxies:
@@ -282,7 +282,7 @@ proxy-groups:
       - 🌐 其他
 
   # 地区代理组 - 香港
-  - name: 🇭🇰 香港
+  - name: 香港
     type: url-test
     include-all: true
     filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
@@ -292,7 +292,7 @@ proxy-groups:
     tolerance: 50
 
   # 地区代理组 - 美国
-  - name: 🇺🇸 美国
+  - name: 美国
     type: url-test
     include-all: true
     filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
@@ -302,7 +302,7 @@ proxy-groups:
     tolerance: 50
 
   # 地区代理组 - 日本
-  - name: 🇯🇵 日本
+  - name: 日本
     type: url-test
     include-all: true
     filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
@@ -312,7 +312,7 @@ proxy-groups:
     tolerance: 50
 
   # 地区代理组 - 新加坡
-  - name: 🇸🇬 新加坡
+  - name: 新加坡
     type: url-test
     include-all: true
     filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
@@ -322,7 +322,7 @@ proxy-groups:
     tolerance: 50
 
   # 地区代理组 - 台湾
-  - name: 🇹🇼 台湾
+  - name: 台湾
     type: url-test
     include-all: true
     filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
@@ -332,7 +332,7 @@ proxy-groups:
     tolerance: 50
 
   # 地区代理组 - 韩国
-  - name: 🇰🇷 韩国
+  - name: 韩国
     type: url-test
     include-all: true
     filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
@@ -342,7 +342,7 @@ proxy-groups:
     tolerance: 50
 
   # 其他地区代理组
-  - name: 🌐 其他
+  - name: 其他
     type: url-test
     include-all: true
     filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
@@ -352,28 +352,28 @@ proxy-groups:
     tolerance: 50
 
   # 直连代理组
-  - name: 🎯 全球直连
+  - name: 全球直连
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
     proxies:
       - DIRECT
 
   # 漏网之鱼代理组
-  - name: 🐟 漏网之鱼
+  - name: 漏网之鱼
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png"
     proxies:
-      - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🎯 全球直连
-      - 🤚 手动选择
-      - 🇭🇰 香港
-      - 🇺🇸 美国
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国
-      - 🌐 其他
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 美国
+      - 日本
+      - 新加坡
+      - 台湾
+      - 韩国
+      - 其他
 
 rule-providers:
   # 局域网地址规则
@@ -630,68 +630,68 @@ rule-providers:
 
 rules:
   # 局域网地址 - 直连
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,LocalAreaNetwork,全球直连
 
   # 谷歌FCM
-  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,GoogleFCM,谷歌FCM
 
   # 国内常用服务 - 直连
-  - RULE-SET,GoogleCN,🎯 全球直连
-  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,GoogleCN,全球直连
+  - RULE-SET,SteamCN,全球直连
 
   # LinuxDo 网站
-  - DOMAIN-SUFFIX,linux.do,📣 LINUXDO
+  - DOMAIN-SUFFIX,linux.do,LINUXDO
 
   # GitHub 服务
-  - RULE-SET,Github,🐈‍⬛ GitHub
+  - RULE-SET,Github,GitHub
 
   # 国外开发服务
-  - RULE-SET,Developer,🛠️ 国外开发
+  - RULE-SET,Developer,国外开发
 
   # 国外AI服务
-  - RULE-SET,AI,🪄 国外AI
+  - RULE-SET,AI,国外AI
 
   # 视频会议服务
-  - RULE-SET,Zoom,💻 Zoom
+  - RULE-SET,Zoom,Zoom
 
   # 游戏平台服务
-  - RULE-SET,Steam,🎮 游戏平台
-  - RULE-SET,Epic,🎮 游戏平台
-  - RULE-SET,Origin,🎮 游戏平台
-  - RULE-SET,Sony,🎮 游戏平台
-  - RULE-SET,Nintendo,🎮 游戏平台
+  - RULE-SET,Steam,游戏平台
+  - RULE-SET,Epic,游戏平台
+  - RULE-SET,Origin,游戏平台
+  - RULE-SET,Sony,游戏平台
+  - RULE-SET,Nintendo,游戏平台
 
   # 流媒体服务
-  - RULE-SET,YouTube,📺 YouTube
-  - RULE-SET,Netflix,🎬 Netflix
-  - RULE-SET,ProxyMedia,🎥 国外媒体
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,ProxyMedia,国外媒体
 
   # 社交通讯服务
-  - RULE-SET,Telegram,📲 社交通讯
-  - RULE-SET,Twitter,📲 社交通讯
-  - RULE-SET,Facebook,📲 社交通讯
-  - RULE-SET,Instagram,📲 社交通讯
+  - RULE-SET,Telegram,社交通讯
+  - RULE-SET,Twitter,社交通讯
+  - RULE-SET,Facebook,社交通讯
+  - RULE-SET,Instagram,社交通讯
 
   # 国际大厂服务
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Google,🟢 谷歌服务
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Google,谷歌服务
 
   # 成人内容服务
-  - RULE-SET,Porn,🔞 成人内容
+  - RULE-SET,Porn,成人内容
 
   # 兜底规则 - 国内域名和IP直连
-  - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - RULE-SET,ChinaDomain,全球直连
+  - RULE-SET,ChinaCompanyIp,全球直连
 
   # 下载工具直连
-  - RULE-SET,Download,🎯 全球直连
+  - RULE-SET,Download,全球直连
 
   # 自定义直连域名规则
-  - RULE-SET,ClashDirect,🎯 全球直连
+  - RULE-SET,ClashDirect,全球直连
 
   # 中国IP直连
-  - GEOIP,CN,🎯 全球直连
+  - GEOIP,CN,全球直连
 
   # 漏网之鱼 - 最终兜底规则
-  - MATCH,🐟 漏网之鱼
+  - MATCH,漏网之鱼
