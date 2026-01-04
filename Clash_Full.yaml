@@ -619,15 +619,6 @@ rule-providers:
     interval: 86400
     format: text
 
-  # 自定义直连规则
-  ClashDirect:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Direct.list
-    path: ./ruleset/ClashDirect.list
-    interval: 86400
-    format: text
-
 rules:
   # 局域网地址 - 直连
   - RULE-SET,LocalAreaNetwork,全球直连
@@ -686,9 +677,6 @@ rules:
 
   # 下载工具直连
   - RULE-SET,Download,全球直连
-
-  # 自定义直连域名规则
-  - RULE-SET,ClashDirect,全球直连
 
   # 中国IP直连
   - GEOIP,CN,全球直连
