@@ -68,7 +68,6 @@ const rules = [
   "RULE-SET,direct,全球直连",
   "RULE-SET,cnip,全球直连",
   "RULE-SET,download,全球直连",
-  "RULE-SET,clash_direct,全球直连",
 
   "GEOIP,CN,全球直连",
   "MATCH,漏网之鱼",
@@ -189,13 +188,6 @@ const ruleProviders = {
     behavior: "domain",
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/download.mrs",
     path: "./ruleset/download.mrs",
-  },
-  clash_direct: {
-    ...ruleProviderCommon,
-    behavior: "domain",
-    url: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Direct.list",
-    format: "text",
-    path: "./ruleset/clash_direct.list",
   },
 };
 
