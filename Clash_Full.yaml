@@ -64,7 +64,7 @@ proxy-groups:
   # LinuxDo 网站代理组
   - name: LINUXDO
     type: select
-    icon: "https://linux.do/uploads/default/original/4X/6/a/6/6a6affc7b1ce8140279e959d32671304db06d5ab.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cat.png"
     proxies:
       - 自动选择
       - 故障转移
