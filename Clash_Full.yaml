@@ -14,7 +14,7 @@ proxy-groups:
     type: url-test
     include-all: true
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
 
@@ -23,7 +23,7 @@ proxy-groups:
     type: fallback
     include-all: true
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
 
@@ -287,7 +287,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HK.png"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
 
@@ -297,7 +297,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
 
@@ -306,7 +306,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
     interval: 300
     tolerance: 50
@@ -316,7 +316,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
     interval: 300
     tolerance: 50
@@ -326,7 +326,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TW.png"
     interval: 300
     tolerance: 50
@@ -336,7 +336,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/KR.png"
     interval: 300
     tolerance: 50
@@ -346,7 +346,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
-    url: https://www.gstatic.com/generate_204
+    url: https://cp.cloudflare.com/generate_204
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"
     interval: 300
     tolerance: 50

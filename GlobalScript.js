@@ -5,7 +5,7 @@ const customRules = [
 ];
 
 // 默认测试网址
-const test_url = "https://www.gstatic.com/generate_204";
+const test_url = "https://cp.cloudflare.com/generate_204";
 // 测试网址检测间隔
 const test_interval = 240;
 // 测试网址的间隔差值，超过这个差值就会切换节点，越小切换越频繁
