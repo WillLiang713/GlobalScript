@@ -298,23 +298,6 @@ proxy-groups:
       - 美国
       - 其他
 
-  # 成人内容代理组
-  - name: 成人内容
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
-    proxies:
-      - 自动选择
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
-
   # 地区代理组 - 香港
   - name: 香港
     type: url-test
@@ -635,15 +618,6 @@ rule-providers:
     interval: 86400
     format: text
 
-  # 成人内容规则
-  Porn:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Porn.list
-    path: ./ruleset/Porn.list
-    interval: 86400
-    format: text
-
   # 中国域名规则
   ChinaDomain:
     type: http
@@ -725,9 +699,6 @@ rules:
   - RULE-SET,Apple,苹果服务
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Google,谷歌服务
-
-  # 成人内容服务
-  - RULE-SET,Porn,成人内容
 
   # 兜底规则 - 国内域名和IP直连
   - RULE-SET,ChinaDomain,全球直连

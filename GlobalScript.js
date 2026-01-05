@@ -64,7 +64,6 @@ const rules = [
   "RULE-SET,apple,苹果服务",
   "RULE-SET,microsoft,微软服务",
   "RULE-SET,google,谷歌服务",
-  "RULE-SET,porn,成人内容",
 
   // 兜底直连
   "RULE-SET,direct,全球直连",
@@ -179,12 +178,7 @@ const ruleProviders = {
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs",
     path: "./ruleset/google.mrs",
   },
-  porn: {
-    ...ruleProviderCommon,
-    behavior: "domain",
-    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/porn.mrs",
-    path: "./ruleset/porn.mrs",
-  },
+
   direct: {
     ...ruleProviderCommon,
     behavior: "domain",
@@ -394,13 +388,7 @@ const proxyGroups = [
     proxies: baseProxies,
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png",
   },
-  {
-    ...groupBaseOption,
-    name: "成人内容",
-    type: "select",
-    proxies: baseProxies,
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png",
-  },
+
   {
     ...groupBaseOption,
     name: "全球直连",
