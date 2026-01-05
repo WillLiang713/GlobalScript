@@ -483,33 +483,6 @@ rule-providers:
     interval: 86400
     format: text
 
-    # 苹果服务规则
-  Apple:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
-    path: ./ruleset/Apple.list
-    interval: 86400
-    format: text
-
-  # 微软服务规则
-  Microsoft:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
-    path: ./ruleset/Microsoft.list
-    interval: 86400
-    format: text
-
-  # 谷歌服务规则
-  Google:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
-    path: ./ruleset/Google.list
-    interval: 86400
-    format: text
-
   # 游戏平台规则 - Steam
   Steam:
     type: http
@@ -579,6 +552,33 @@ rule-providers:
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
     path: ./ruleset/ProxyMedia.list
+    interval: 86400
+    format: text
+
+    # 苹果服务规则
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./ruleset/Apple.list
+    interval: 86400
+    format: text
+
+  # 微软服务规则
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    interval: 86400
+    format: text
+
+  # 谷歌服务规则
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
+    path: ./ruleset/Google.list
     interval: 86400
     format: text
 
@@ -676,12 +676,7 @@ rules:
 
   # 视频会议服务
   - RULE-SET,Zoom,Zoom
-
-  # 国际大厂服务
-  - RULE-SET,Apple,苹果服务
-  - RULE-SET,Microsoft,微软服务
-  - RULE-SET,Google,谷歌服务
-
+  
   # 游戏平台服务
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
@@ -693,6 +688,11 @@ rules:
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Netflix,Netflix
   - RULE-SET,ProxyMedia,国外媒体
+  
+  # 国际大厂服务
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Google,谷歌服务
 
   # 社交通讯服务
   - RULE-SET,Telegram,社交通讯
