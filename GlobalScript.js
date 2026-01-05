@@ -287,7 +287,7 @@ const proxyGroups = [
     name: "LINUXDO",
     type: "select",
     proxies: baseProxies,
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png",
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cat.png",
   },
   {
     ...groupBaseOption,
