@@ -149,7 +149,7 @@ proxy-groups:
   # 谷歌服务代理组
   - name: 谷歌服务
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -166,7 +166,7 @@ proxy-groups:
   # 谷歌FCM代理组
   - name: 谷歌FCM
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     proxies:
       - 自动选择
       - 故障转移

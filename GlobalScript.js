@@ -322,14 +322,14 @@ const proxyGroups = [
     name: "谷歌服务",
     type: "select",
     proxies: baseProxies,
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png",
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png",
   },
   {
     ...groupBaseOption,
     name: "谷歌FCM",
     type: "select",
     proxies: baseProxies,
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png",
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png",
   },
   {
     ...groupBaseOption,
