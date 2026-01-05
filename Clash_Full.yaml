@@ -132,7 +132,7 @@ proxy-groups:
   # Zoom 视频会议代理组
   - name: Zoom
     type: select
-    icon: "https://www.zoom.com/favicon.ico"
+    icon: "https://cdn.worldvectorlogo.com/logos/zoom-communications-logo.svg"
     proxies:
       - 自动选择
       - 故障转移
