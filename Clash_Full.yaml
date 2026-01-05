@@ -483,6 +483,33 @@ rule-providers:
     interval: 86400
     format: text
 
+    # 苹果服务规则
+  Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./ruleset/Apple.list
+    interval: 86400
+    format: text
+
+  # 微软服务规则
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    interval: 86400
+    format: text
+
+  # 谷歌服务规则
+  Google:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
+    path: ./ruleset/Google.list
+    interval: 86400
+    format: text
+
   # 游戏平台规则 - Steam
   Steam:
     type: http
@@ -591,33 +618,6 @@ rule-providers:
     interval: 86400
     format: text
 
-  # 苹果服务规则
-  Apple:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
-    path: ./ruleset/Apple.list
-    interval: 86400
-    format: text
-
-  # 微软服务规则
-  Microsoft:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
-    path: ./ruleset/Microsoft.list
-    interval: 86400
-    format: text
-
-  # 谷歌服务规则
-  Google:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
-    path: ./ruleset/Google.list
-    interval: 86400
-    format: text
-
   # 中国域名规则
   ChinaDomain:
     type: http
@@ -677,6 +677,11 @@ rules:
   # 视频会议服务
   - RULE-SET,Zoom,Zoom
 
+  # 国际大厂服务
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Google,谷歌服务
+
   # 游戏平台服务
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
@@ -694,11 +699,6 @@ rules:
   - RULE-SET,Twitter,社交通讯
   - RULE-SET,Facebook,社交通讯
   - RULE-SET,Instagram,社交通讯
-
-  # 国际大厂服务
-  - RULE-SET,Apple,苹果服务
-  - RULE-SET,Microsoft,微软服务
-  - RULE-SET,Google,谷歌服务
 
   # 兜底规则 - 国内域名和IP直连
   - RULE-SET,ChinaDomain,全球直连
