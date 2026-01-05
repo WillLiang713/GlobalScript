@@ -52,6 +52,8 @@ const rules = [
   "DOMAIN-SUFFIX,linux.do,LINUXDO",
   "RULE-SET,github,GitHub",
   "RULE-SET,dev,国外开发",
+  "RULE-SET,openai,OpenAI",
+  "RULE-SET,gemini,Gemini",
   "RULE-SET,ai,国外AI",
   "RULE-SET,zoom,Zoom",
   "RULE-SET,games,游戏平台",
@@ -104,6 +106,18 @@ const ruleProviders = {
     behavior: "domain",
     url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-dev.mrs",
     path: "./ruleset/dev.mrs",
+  },
+  openai: {
+    ...ruleProviderCommon,
+    behavior: "domain",
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs",
+    path: "./ruleset/openai.mrs",
+  },
+  gemini: {
+    ...ruleProviderCommon,
+    behavior: "domain",
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google-gemini.mrs",
+    path: "./ruleset/gemini.mrs",
   },
   ai: {
     ...ruleProviderCommon,
@@ -267,6 +281,20 @@ const proxyGroups = [
     type: "fallback",
     "include-all": true,
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png",
+  },
+  {
+    ...groupBaseOption,
+    name: "OpenAI",
+    type: "select",
+    proxies: baseProxies,
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png",
+  },
+  {
+    ...groupBaseOption,
+    name: "Gemini",
+    type: "select",
+    proxies: baseProxies,
+    icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg",
   },
   {
     ...groupBaseOption,

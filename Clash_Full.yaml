@@ -27,6 +27,40 @@ proxy-groups:
     interval: 300
     tolerance: 50
 
+  # OpenAI 代理组
+  - name: OpenAI
+    type: select
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
+
+  # Gemini 代理组
+  - name: Gemini
+    type: select
+    icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
+
   # 国外AI服务代理组
   - name: 国外AI
     type: select
@@ -430,6 +464,24 @@ rule-providers:
     interval: 86400
     format: text
 
+  # OpenAI规则
+  OpenAI:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    path: ./ruleset/OpenAI.list
+    interval: 86400
+    format: text
+
+  # Gemini规则
+  Gemini:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Gemini.list
+    path: ./ruleset/Gemini.list
+    interval: 86400
+    format: text
+
   # 国外AI服务规则
   AI:
     type: http
@@ -638,6 +690,12 @@ rules:
 
   # 国外开发服务
   - RULE-SET,Developer,国外开发
+
+  # OpenAI 服务
+  - RULE-SET,OpenAI,OpenAI
+
+  # Gemini 服务
+  - RULE-SET,Gemini,Gemini
 
   # 国外AI服务
   - RULE-SET,AI,国外AI
