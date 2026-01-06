@@ -392,323 +392,63 @@ proxy-groups:
       - 韩国
       - 其他
 
-rule-providers:
-  # 局域网地址规则
-  LocalAreaNetwork:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
-    interval: 86400
-    format: text
-
-  # 谷歌FCM规则
-  GoogleFCM:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
-    path: ./ruleset/GoogleFCM.list
-    interval: 86400
-    format: text
-
-  # 谷歌中国服务规则
-  GoogleCN:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./ruleset/GoogleCN.list
-    interval: 86400
-    format: text
-
-  # Steam中国规则
-  SteamCN:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./ruleset/SteamCN.list
-    interval: 86400
-    format: text
-
-  # GitHub规则
-  Github:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Github.list
-    path: ./ruleset/Github.list
-    interval: 86400
-    format: text
-
-  # 国外开发服务规则
-  Developer:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Developer.list
-    path: ./ruleset/Developer.list
-    interval: 86400
-    format: text
-
-  # OpenAI规则
-  OpenAI:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
-    path: ./ruleset/OpenAI.list
-    interval: 86400
-    format: text
-
-  # Gemini规则
-  Gemini:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Gemini.list
-    path: ./ruleset/Gemini.list
-    interval: 86400
-    format: text
-
-  # 国外AI服务规则
-  AI:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list
-    path: ./ruleset/AI.list
-    interval: 86400
-    format: text
-
-  # Zoom规则
-  Zoom:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Zoom.list
-    path: ./ruleset/Zoom.list
-    interval: 86400
-    format: text
-
-  # 游戏平台规则 - Steam
-  Steam:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
-    path: ./ruleset/Steam.list
-    interval: 86400
-    format: text
-
-  # 游戏平台规则 - Epic
-  Epic:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
-    path: ./ruleset/Epic.list
-    interval: 86400
-    format: text
-
-  # 游戏平台规则 - Origin
-  Origin:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list
-    path: ./ruleset/Origin.list
-    interval: 86400
-    format: text
-
-  # 游戏平台规则 - Sony
-  Sony:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list
-    path: ./ruleset/Sony.list
-    interval: 86400
-    format: text
-
-  # 游戏平台规则 - Nintendo
-  Nintendo:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
-    path: ./ruleset/Nintendo.list
-    interval: 86400
-    format: text
-
-  # YouTube规则
-  YouTube:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
-    path: ./ruleset/YouTube.list
-    interval: 86400
-    format: text
-
-  # Netflix规则
-  Netflix:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
-    path: ./ruleset/Netflix.list
-    interval: 86400
-    format: text
-
-  # 国外媒体规则
-  ProxyMedia:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-    path: ./ruleset/ProxyMedia.list
-    interval: 86400
-    format: text
-
-    # 苹果服务规则
-  Apple:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
-    path: ./ruleset/Apple.list
-    interval: 86400
-    format: text
-
-  # 微软服务规则
-  Microsoft:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
-    path: ./ruleset/Microsoft.list
-    interval: 86400
-    format: text
-
-  # 谷歌服务规则
-  Google:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
-    path: ./ruleset/Google.list
-    interval: 86400
-    format: text
-
-  # 社交通讯规则 - Telegram
-  Telegram:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-    path: ./ruleset/Telegram.list
-    interval: 86400
-    format: text
-
-  # 社交通讯规则 - Twitter
-  Twitter:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Twitter.list
-    path: ./ruleset/Twitter.list
-    interval: 86400
-    format: text
-
-  # 社交通讯规则 - Facebook
-  Facebook:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Facebook.list
-    path: ./ruleset/Facebook.list
-    interval: 86400
-    format: text
-
-  # 社交通讯规则 - Instagram
-  Instagram:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Instagram.list
-    path: ./ruleset/Instagram.list
-    interval: 86400
-    format: text
-
-  # 中国域名规则
-  ChinaDomain:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./ruleset/ChinaDomain.list
-    interval: 86400
-    format: text
-
-  # 中国公司IP规则
-  ChinaCompanyIp:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./ruleset/ChinaCompanyIp.list
-    interval: 86400
-    format: text
-
-  # 下载工具规则
-  Download:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
-    path: ./ruleset/Download.list
-    interval: 86400
-    format: text
-
 rules:
-  # 局域网地址 - 直连
-  - RULE-SET,LocalAreaNetwork,全球直连
+  # 局域网
+  - GEOSITE,private,全球直连
 
   # 谷歌FCM
-  - RULE-SET,GoogleFCM,谷歌FCM
+  - GEOSITE,googlefcm,谷歌FCM
 
-  # 国内常用服务 - 直连
-  - RULE-SET,GoogleCN,全球直连
-  - RULE-SET,SteamCN,全球直连
+  # 谷歌中国服务
+  - GEOSITE,google-cn,全球直连
 
-  # LinuxDo 网站
+  # Steam 下载及调度 (直连)
+  - GEOSITE,steam@cn,全球直连
+  - DOMAIN-SUFFIX,steamserver.net,全球直连
+
+  # LinuxDo
   - DOMAIN-SUFFIX,linux.do,LINUXDO
 
-  # GitHub 服务
-  - RULE-SET,Github,GitHub
+  # AI 服务
+  - GEOSITE,openai,OpenAI
+  - GEOSITE,google-gemini,Gemini
+  - GEOSITE,category-ai-chat-!cn,国外AI
 
-  # 国外开发服务
-  - RULE-SET,Developer,国外开发
+  # 开发平台
+  - GEOSITE,github,GitHub
+  - GEOSITE,category-dev,国外开发
 
-  # OpenAI 服务
-  - RULE-SET,OpenAI,OpenAI
+  # 视频会议
+  - GEOSITE,zoom,Zoom
 
-  # Gemini 服务
-  - RULE-SET,Gemini,Gemini
+  # 游戏平台 (Steam商店走这里)
+  - GEOSITE,steam,游戏平台
+  - GEOSITE,epicgames,游戏平台
+  - GEOSITE,ea,游戏平台
+  - GEOSITE,playstation,游戏平台
+  - GEOSITE,nintendo,游戏平台
 
-  # 国外AI服务
-  - RULE-SET,AI,国外AI
+  # 流媒体
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,netflix,Netflix
+  - GEOSITE,category-media,国外媒体
 
-  # 视频会议服务
-  - RULE-SET,Zoom,Zoom
+  # 社交网络
+  - GEOSITE,telegram,社交通讯
+  - GEOSITE,twitter,社交通讯
+  - GEOSITE,facebook,社交通讯
+  - GEOSITE,instagram,社交通讯
 
-  # 游戏平台服务
-  - RULE-SET,Steam,游戏平台
-  - RULE-SET,Epic,游戏平台
-  - RULE-SET,Origin,游戏平台
-  - RULE-SET,Sony,游戏平台
-  - RULE-SET,Nintendo,游戏平台
+  # 大厂服务
+  - GEOSITE,google,谷歌服务
+  - GEOSITE,apple,苹果服务
+  - GEOSITE,microsoft,微软服务
 
-  # 流媒体服务
-  - RULE-SET,YouTube,YouTube
-  - RULE-SET,Netflix,Netflix
-  - RULE-SET,ProxyMedia,国外媒体
+  # 国内兜底 (域名)
+  - GEOSITE,cn,全球直连
 
-  # 国际大厂服务
-  - RULE-SET,Apple,苹果服务
-  - RULE-SET,Microsoft,微软服务
-  - RULE-SET,Google,谷歌服务
+  # 国内兜底 (IP)
+  - GEOIP,cn,全球直连
 
-  # 社交通讯服务
-  - RULE-SET,Telegram,社交通讯
-  - RULE-SET,Twitter,社交通讯
-  - RULE-SET,Facebook,社交通讯
-  - RULE-SET,Instagram,社交通讯
-
-  # 兜底规则 - 国内域名和IP直连
-  - RULE-SET,ChinaDomain,全球直连
-  - RULE-SET,ChinaCompanyIp,全球直连
-
-  # 下载工具直连
-  - RULE-SET,Download,全球直连
-
-  # 中国IP直连
-  - GEOIP,CN,全球直连
-
-  # 漏网之鱼 - 最终兜底规则
+  # 最终兜底
   - MATCH,漏网之鱼
