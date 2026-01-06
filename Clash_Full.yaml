@@ -30,7 +30,7 @@ proxy-groups:
   # OpenAI 代理组
   - name: OpenAI
     type: select
-    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai-light.svg"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -115,7 +115,7 @@ proxy-groups:
   # GitHub 服务代理组
   - name: GitHub
     type: select
-    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github.svg"
     proxies:
       - 自动选择
       - 故障转移
