@@ -47,7 +47,7 @@ proxy-groups:
   # Gemini 代理组
   - name: Gemini
     type: select
-    icon: "https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg"
+    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/gemini-color.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -64,7 +64,7 @@ proxy-groups:
   # 国外AI服务代理组
   - name: 国外AI
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Siri.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -98,7 +98,7 @@ proxy-groups:
   # LinuxDo 网站代理组
   - name: LINUXDO
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cat.png"
+    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/linuxdo.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -132,7 +132,7 @@ proxy-groups:
   # Zoom 视频会议代理组
   - name: Zoom
     type: select
-    icon: "https://cdn.worldvectorlogo.com/logos/zoom-communications-logo.svg"
+    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zoom.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -676,7 +676,7 @@ rules:
 
   # 视频会议服务
   - RULE-SET,Zoom,Zoom
-  
+
   # 游戏平台服务
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
@@ -688,7 +688,7 @@ rules:
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Netflix,Netflix
   - RULE-SET,ProxyMedia,国外媒体
-  
+
   # 国际大厂服务
   - RULE-SET,Apple,苹果服务
   - RULE-SET,Microsoft,微软服务
