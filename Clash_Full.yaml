@@ -298,6 +298,14 @@ proxy-groups:
       - 美国
       - 其他
 
+  # 测速工具代理组
+  - name: 测速工具
+    type: select
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
+    proxies:
+      - 全球直连
+      - 手动选择
+
   # 地区代理组 - 香港
   - name: 香港
     type: url-test
@@ -411,6 +419,9 @@ rules:
 
   # Nintendo 下载及调度 (直连)
   - GEOSITE,nintendo@cn,全球直连
+
+  # 测速工具
+  - GEOSITE,category-speedtest,测速工具
 
   # LinuxDo
   - DOMAIN-SUFFIX,linux.do,LINUXDO
