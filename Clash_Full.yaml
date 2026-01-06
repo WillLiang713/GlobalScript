@@ -406,6 +406,12 @@ rules:
   - GEOSITE,steam@cn,全球直连
   - DOMAIN-SUFFIX,steamserver.net,全球直连
 
+  # EpicGames 下载及调度 (直连)
+  - GEOSITE,epicgames@cn,全球直连
+
+  # Nintendo 下载及调度 (直连)
+  - GEOSITE,nintendo@cn,全球直连
+
   # LinuxDo
   - DOMAIN-SUFFIX,linux.do,LINUXDO
 
