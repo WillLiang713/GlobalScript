@@ -34,6 +34,7 @@ https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml
 **流媒体**: Netflix、YouTube、国外媒体  
 **社交通讯**: Telegram、Twitter  
 **游戏平台**: Steam、Epic、EA、PlayStation、Nintendo
+**测速工具**：Speedtest
 
 ---
 *简单、高效、开箱即用*
