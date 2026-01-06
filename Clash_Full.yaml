@@ -30,7 +30,7 @@ proxy-groups:
   # OpenAI 代理组
   - name: OpenAI
     type: select
-    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/openai.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai-light.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -47,7 +47,7 @@ proxy-groups:
   # Gemini 代理组
   - name: Gemini
     type: select
-    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/gemini-color.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-gemini.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -98,7 +98,7 @@ proxy-groups:
   # LinuxDo 网站代理组
   - name: LINUXDO
     type: select
-    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/linuxdo.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linuxdo.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -115,7 +115,7 @@ proxy-groups:
   # GitHub 服务代理组
   - name: GitHub
     type: select
-    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/github.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -132,7 +132,7 @@ proxy-groups:
   # Zoom 视频会议代理组
   - name: Zoom
     type: select
-    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zoom.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zoom.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -149,7 +149,7 @@ proxy-groups:
   # 苹果服务代理组
   - name: 苹果服务
     type: select
-    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/apple.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -166,7 +166,7 @@ proxy-groups:
   # 微软服务代理组
   - name: 微软服务
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -183,7 +183,7 @@ proxy-groups:
   # 谷歌服务代理组
   - name: 谷歌服务
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -200,7 +200,7 @@ proxy-groups:
   # 谷歌FCM代理组
   - name: 谷歌FCM
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/firebase.svg"
     proxies:
       - 自动选择
       - 故障转移
