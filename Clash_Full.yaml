@@ -30,7 +30,7 @@ proxy-groups:
   # OpenAI 代理组
   - name: OpenAI
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/openai.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -115,7 +115,7 @@ proxy-groups:
   # GitHub 服务代理组
   - name: GitHub
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
+    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/github.png"
     proxies:
       - 自动选择
       - 故障转移
@@ -149,7 +149,7 @@ proxy-groups:
   # 苹果服务代理组
   - name: 苹果服务
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+    icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/apple.png"
     proxies:
       - 自动选择
       - 故障转移
