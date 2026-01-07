@@ -323,12 +323,6 @@ proxy-groups:
       - 自建
       - 手动选择
 
-  - name: 中转
-    type: select
-    include-all: true
-    filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-    icon: "https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png"
-
   - name: 自建
     type: select
     include-all: true
