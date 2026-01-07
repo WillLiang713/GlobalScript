@@ -365,9 +365,6 @@ proxy-groups:
     include-all: true
     filter: "(?i)自建|My|Private|Home"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
 
   # 地区代理组 - 香港
   - name: 香港
