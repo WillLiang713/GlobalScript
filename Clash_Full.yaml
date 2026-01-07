@@ -36,6 +36,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -53,6 +54,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -70,6 +72,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -87,6 +90,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -104,6 +108,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -121,6 +126,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -138,6 +144,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -155,6 +162,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -172,6 +180,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -189,6 +198,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -206,6 +216,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -223,6 +234,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -240,6 +252,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -257,6 +270,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -273,6 +287,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -290,6 +305,7 @@ proxy-groups:
       - 故障转移
       - 全球直连
       - 手动选择
+      - 链式代理
       - 香港
       - 台湾
       - 新加坡
@@ -305,6 +321,53 @@ proxy-groups:
     proxies:
       - 全球直连
       - 手动选择
+      - 链式代理
+
+  # 入口（中转机）
+  - name: 链式入口
+    type: select
+    include-all: true
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
+
+  # 落地（出口节点）
+  - name: 链式出口
+    type: select
+    include-all: true
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png"
+    proxies:
+      - 自建节点
+      - 手动选择
+      - 美国
+
+  # 入口 -> 出口
+  - name: 链式代理
+    type: relay
+    proxies:
+      - 链式入口
+      - 链式出口
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+
+  # 自建节点代理组
+  - name: 自建节点
+    type: select
+    include-all: true
+    filter: "(?i)自建|My|Private|Home"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
 
   # 地区代理组 - 香港
   - name: 香港
