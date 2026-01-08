@@ -430,6 +430,12 @@ rules:
   # 谷歌FCM
   - GEOSITE,googlefcm,谷歌FCM
 
+  # 微软中国服务
+  - GEOSITE,microsoft@cn,全球直连
+
+  # Apple 中国服务
+  - GEOSITE,apple@cn,全球直连
+
   # 谷歌中国服务
   - GEOSITE,google-cn,全球直连
 
