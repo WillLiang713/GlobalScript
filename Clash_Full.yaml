@@ -81,100 +81,10 @@ proxy-groups:
       - 美国
       - 其他
 
-  # GitHub 服务代理组
-  - name: GitHub
-    type: select
-    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github.svg"
-    proxies:
-      - 自动选择
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
-
   # Zoom 视频会议代理组
   - name: Zoom
     type: select
     icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zoom.svg"
-    proxies:
-      - 自动选择
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
-
-  # 苹果服务代理组
-  - name: 苹果服务
-    type: select
-    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"
-    proxies:
-      - 自动选择
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
-
-  # 微软服务代理组
-  - name: 微软服务
-    type: select
-    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png"
-    proxies:
-      - 自动选择
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
-
-  # 谷歌服务代理组
-  - name: 谷歌服务
-    type: select
-    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"
-    proxies:
-      - 自动选择
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
-
-  # 谷歌FCM代理组
-  - name: 谷歌FCM
-    type: select
-    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/firebase.svg"
     proxies:
       - 自动选择
       - 故障转移
@@ -304,6 +214,78 @@ proxy-groups:
       - 全球直连
       - 自建
       - 手动选择
+
+    # 苹果服务代理组
+  - name: 苹果服务
+    type: select
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 自建
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
+
+  # 微软服务代理组
+  - name: 微软服务
+    type: select
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 自建
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
+
+  # 谷歌服务代理组
+  - name: 谷歌服务
+    type: select
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 自建
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
+
+  # 谷歌FCM代理组
+  - name: 谷歌FCM
+    type: select
+    icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/firebase.svg"
+    proxies:
+      - 自动选择
+      - 故障转移
+      - 全球直连
+      - 手动选择
+      - 自建
+      - 香港
+      - 台湾
+      - 新加坡
+      - 日本
+      - 韩国
+      - 美国
+      - 其他
 
   # 广告屏蔽代理组
   - name: 广告屏蔽
