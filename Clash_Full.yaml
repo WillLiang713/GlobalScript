@@ -10,7 +10,7 @@ proxy-groups:
     include-all: true
 
   # 自动选择代理组 - 根据延迟自动选择最优节点
-  - name: 自动选择
+  - name: 延迟优选
     type: url-test
     include-all: true
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png"
@@ -32,11 +32,12 @@ proxy-groups:
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -50,11 +51,12 @@ proxy-groups:
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -68,11 +70,12 @@ proxy-groups:
     type: select
     icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linuxdo.svg"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -86,11 +89,12 @@ proxy-groups:
     type: select
     icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zoom.svg"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -104,11 +108,12 @@ proxy-groups:
     type: select
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -122,11 +127,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -140,11 +146,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -157,11 +164,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -175,11 +183,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -193,11 +202,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -211,20 +221,21 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png"
     proxies:
-      - 全球直连
-      - 自建
+      - 自建手选
       - 手动选择
+      - 全球直连
 
     # 苹果服务代理组
   - name: 苹果服务
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -238,11 +249,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -256,11 +268,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -274,11 +287,12 @@ proxy-groups:
     type: select
     icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/firebase.svg"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
-      - 自建
+      - 自建优选
+      - 自建手选
       - 香港
       - 台湾
       - 新加坡
@@ -294,12 +308,23 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
-
-  - name: 自建
+  
+  # 自建节点手动选择代理组
+  - name: 自建手选
     type: select
     include-all: true
     filter: "(?i)自建"
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Personal.png"
+
+  # 自建节点优选代理组
+  - name: 自建优选
+    type: url-test
+    include-all: true
+    filter: "(?i)自建"
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Personal.png"
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
 
   # 地区代理组 - 香港
   - name: 香港
@@ -363,13 +388,10 @@ proxy-groups:
 
   # 其他地区代理组
   - name: 其他
-    type: url-test
+    type: select
     include-all: true
     filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
-    url: https://cp.cloudflare.com/generate_204
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/XD.png"
-    interval: 300
-    tolerance: 50
 
   # 直连代理组
   - name: 全球直连
@@ -383,10 +405,12 @@ proxy-groups:
     type: select
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"
     proxies:
-      - 自动选择
+      - 延迟优选
       - 故障转移
       - 全球直连
       - 手动选择
+      - 自建优选
+      - 自建手选
       - 香港
       - 美国
       - 日本
