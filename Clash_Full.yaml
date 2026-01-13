@@ -6,14 +6,14 @@ proxy-groups:
   # 手动选择代理组 - 用户可以手动切换代理节点
   - name: 手动选择
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Static.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
     include-all: true
 
   # 自动选择代理组 - 根据延迟自动选择最优节点
   - name: 延迟优选
     type: url-test
     include-all: true
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Auto.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
@@ -22,7 +22,7 @@ proxy-groups:
   - name: 故障转移
     type: fallback
     include-all: true
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Available.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png"
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
@@ -30,7 +30,7 @@ proxy-groups:
   # 国外AI服务代理组
   - name: 国外AI
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Bot.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -49,7 +49,7 @@ proxy-groups:
   # 国外开发服务代理组
   - name: 国外开发
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Stack.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -68,7 +68,7 @@ proxy-groups:
   # 国外论坛代理组
   - name: 国外论坛
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Heart.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -87,7 +87,7 @@ proxy-groups:
   # Zoom 视频会议代理组
   - name: Zoom
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Streaming.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -106,7 +106,7 @@ proxy-groups:
   # 游戏平台代理组
   - name: 游戏平台
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Game.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -125,7 +125,7 @@ proxy-groups:
   # YouTube 代理组
   - name: YouTube
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/YouTube.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -144,7 +144,7 @@ proxy-groups:
   # Netflix 代理组
   - name: Netflix
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Netflix.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -162,7 +162,7 @@ proxy-groups:
   # TikTok 代理组
   - name: TikTok
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/TikTok.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -181,7 +181,7 @@ proxy-groups:
   # 国外娱乐代理组
   - name: 国外娱乐
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/GlobalMedia.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -200,7 +200,7 @@ proxy-groups:
   # 社交通讯代理组
   - name: 社交通讯
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Telegram.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -219,7 +219,7 @@ proxy-groups:
   # 测速工具代理组
   - name: 测速工具
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Speedtest.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
     proxies:
       - 自建手选
       - 手动选择
@@ -228,7 +228,7 @@ proxy-groups:
     # 苹果代理组
   - name: 苹果
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Apple.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -247,7 +247,7 @@ proxy-groups:
   # 微软代理组
   - name: 微软
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Microsoft.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -266,7 +266,7 @@ proxy-groups:
   # 谷歌代理组
   - name: 谷歌
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Google.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     proxies:
       - 延迟优选
       - 故障转移
@@ -285,7 +285,7 @@ proxy-groups:
   # 广告屏蔽代理组
   - name: 广告屏蔽
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Advertising.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png"
     proxies:
       - REJECT
       - DIRECT
@@ -295,14 +295,14 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?i)自建"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Server.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
 
   # 自建节点优选代理组
   - name: 自建优选
     type: url-test
     include-all: true
     filter: "(?i)自建"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Server.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
@@ -312,7 +312,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/HK.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HK.png"
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
@@ -322,7 +322,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/US.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
     url: https://cp.cloudflare.com/generate_204
     interval: 300
     tolerance: 50
@@ -333,7 +333,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
     url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/JP.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
     interval: 300
     tolerance: 50
 
@@ -343,7 +343,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
     url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/SG.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
     interval: 300
     tolerance: 50
 
@@ -353,7 +353,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
     url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/CN.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/CN.png"
     interval: 300
     tolerance: 50
 
@@ -363,7 +363,7 @@ proxy-groups:
     include-all: true
     filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
     url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/KR.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/KR.png"
     interval: 300
     tolerance: 50
 
@@ -372,19 +372,19 @@ proxy-groups:
     type: select
     include-all: true
     filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/XD.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png"
 
   # 直连代理组
   - name: 全球直连
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Global.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
     proxies:
       - DIRECT
 
   # 漏网之鱼代理组
   - name: 漏网之鱼
     type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Final.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
     proxies:
       - 延迟优选
       - 故障转移
