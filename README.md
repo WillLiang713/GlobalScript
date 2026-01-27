@@ -4,7 +4,7 @@
 
 ## 核心文件
 
-- **[Clash_Full.yaml](https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml)** - 完整的 Clash 配置文件，基于 Geodata 优化
+- **[Clash_Full.yaml](https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml)** - 模板配置文件（不含节点），基于 Geodata 优化
 
 ## 功能特性
 
@@ -16,16 +16,12 @@
 
 ## 快速开始
 
-### 方式一：远程订阅 (推荐)
-直接在 Clash 客户端中添加以下订阅地址：
-```
-https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml
-```
+`Clash_Full.yaml` 只是**模板**，不包含任何节点信息，不能作为订阅直接使用。
 
-### 方式二：手动导入
+### 推荐方式：下载模板后与节点合并
 1. 下载 `Clash_Full.yaml` 到你的 Clash 客户端配置目录
-2. 导入你的订阅节点或手动添加节点
-3. 启动 Clash 即可使用
+2. 在客户端中导入你的订阅节点，或手动把节点加入此配置（`proxies:` 或客户端的配置合并功能）
+3. 选中该配置并启用即可使用
 
 ## 支持的服务
 
