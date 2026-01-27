@@ -3,462 +3,450 @@
 # 包含常用的分流规则和代理组配置
 
 proxy-groups:
-  # 手动选择代理组 - 用户可以手动切换代理节点
-  - name: 手动选择
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
-    include-all: true
+# 手动选择代理组 - 用户可以手动切换代理节点
+- name: 手动选择
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
+  include-all: true
 
-  # 自动选择代理组 - 根据延迟自动选择最优节点
-  - name: 延迟优选
-    type: url-test
-    include-all: true
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
+# 自动选择代理组 - 根据延迟自动选择最优节点
+- name: 延迟优选
+  type: url-test
+  include-all: true
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
 
-  # 故障转移代理组 - 按顺序选择可用节点，提高稳定性
-  - name: 故障转移
-    type: fallback
-    include-all: true
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
+# 故障转移代理组 - 按顺序选择可用节点，提高稳定性
+- name: 故障转移
+  type: fallback
+  include-all: true
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
 
-  # 国外AI服务代理组
-  - name: 国外AI
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 国外AI服务代理组
+- name: 国外AI
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 国外开发服务代理组
-  - name: 国外开发
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 国外开发服务代理组
+- name: 国外开发
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 国外论坛代理组
-  - name: 国外论坛
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 国外论坛代理组
+- name: 国外论坛
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # Zoom 视频会议代理组
-  - name: Zoom
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 谷歌代理组
+- name: 谷歌
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 游戏平台代理组
-  - name: 游戏平台
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 微软代理组
+- name: 微软
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # YouTube 代理组
-  - name: YouTube
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 苹果代理组
+- name: 苹果
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # Netflix 代理组
-  - name: Netflix
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 美国
-      - 其他
+# Zoom 视频会议代理组
+- name: Zoom
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # TikTok 代理组
-  - name: TikTok
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 游戏平台代理组
+- name: 游戏平台
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 国外娱乐代理组
-  - name: 国外娱乐
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# YouTube 代理组
+- name: YouTube
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 社交通讯代理组
-  - name: 社交通讯
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# Netflix 代理组
+- name: Netflix
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 美国
+  - 其他
 
-  # 测速工具代理组
-  - name: 测速工具
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
-    proxies:
-      - 自建手选
-      - 手动选择
-      - 全球直连
+# TikTok 代理组
+- name: TikTok
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-    # 苹果代理组
-  - name: 苹果
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 国外娱乐代理组
+- name: 国外娱乐
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 微软代理组
-  - name: 微软
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 社交通讯代理组
+- name: 社交通讯
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
 
-  # 谷歌代理组
-  - name: 谷歌
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 台湾
-      - 新加坡
-      - 日本
-      - 韩国
-      - 美国
-      - 其他
+# 测速工具代理组
+- name: 测速工具
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
+  proxies:
+  - 自建手选
+  - 手动选择
+  - 全球直连
 
-  # 广告屏蔽代理组
-  - name: 广告屏蔽
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png"
-    proxies:
-      - REJECT
-      - DIRECT
-  
-  # 自建节点手动选择代理组
-  - name: 自建手选
-    type: select
-    include-all: true
-    filter: "(?i)自建"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
+# 自建节点手动选择代理组
+- name: 自建手选
+  type: select
+  include-all: true
+  filter: "(?i)自建"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
 
-  # 自建节点优选代理组
-  - name: 自建故转
-    type: fallback
-    include-all: true
-    filter: "(?i)自建"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
+# 自建节点优选代理组
+- name: 自建故转
+  type: fallback
+  include-all: true
+  filter: "(?i)自建"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
 
-  # 地区代理组 - 香港
-  - name: 香港
-    type: url-test
-    include-all: true
-    filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HK.png"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
+# 地区代理组 - 香港
+- name: 香港
+  type: url-test
+  include-all: true
+  filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HK.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
 
-  # 地区代理组 - 美国
-  - name: 美国
-    type: url-test
-    include-all: true
-    filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
-    url: https://cp.cloudflare.com/generate_204
-    interval: 300
-    tolerance: 50
+# 地区代理组 - 美国
+- name: 美国
+  type: url-test
+  include-all: true
+  filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
 
-  # 地区代理组 - 日本
-  - name: 日本
-    type: url-test
-    include-all: true
-    filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-    url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
-    interval: 300
-    tolerance: 50
+# 地区代理组 - 日本
+- name: 日本
+  type: url-test
+  include-all: true
+  filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
+  url: https://cp.cloudflare.com/generate_204
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
+  interval: 300
+  tolerance: 50
 
-  # 地区代理组 - 新加坡
-  - name: 新加坡
-    type: url-test
-    include-all: true
-    filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
-    url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
-    interval: 300
-    tolerance: 50
+# 地区代理组 - 新加坡
+- name: 新加坡
+  type: url-test
+  include-all: true
+  filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
+  url: https://cp.cloudflare.com/generate_204
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
+  interval: 300
+  tolerance: 50
 
-  # 地区代理组 - 台湾
-  - name: 台湾
-    type: url-test
-    include-all: true
-    filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
-    url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/CN.png"
-    interval: 300
-    tolerance: 50
+# 地区代理组 - 台湾
+- name: 台湾
+  type: url-test
+  include-all: true
+  filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
+  url: https://cp.cloudflare.com/generate_204
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/CN.png"
+  interval: 300
+  tolerance: 50
 
-  # 地区代理组 - 韩国
-  - name: 韩国
-    type: url-test
-    include-all: true
-    filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
-    url: https://cp.cloudflare.com/generate_204
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/KR.png"
-    interval: 300
-    tolerance: 50
+# 地区代理组 - 韩国
+- name: 韩国
+  type: url-test
+  include-all: true
+  filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
+  url: https://cp.cloudflare.com/generate_204
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/KR.png"
+  interval: 300
+  tolerance: 50
 
-  # 其他地区代理组
-  - name: 其他
-    type: select
-    include-all: true
-    filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png"
+# 其他地区代理组
+- name: 其他
+  type: select
+  include-all: true
+  filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png"
 
-  # 直连代理组
-  - name: 全球直连
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
-    proxies:
-      - DIRECT
+# 直连代理组
+- name: 全球直连
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+  proxies:
+  - DIRECT
 
-  # 漏网之鱼代理组
-  - name: 漏网之鱼
-    type: select
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
-    proxies:
-      - 延迟优选
-      - 故障转移
-      - 全球直连
-      - 手动选择
-      - 自建故转
-      - 自建手选
-      - 香港
-      - 美国
-      - 日本
-      - 新加坡
-      - 台湾
-      - 韩国
-      - 其他
+# 漏网之鱼代理组
+- name: 漏网之鱼
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+  proxies:
+  - 延迟优选
+  - 故障转移
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 自建手选
+  - 香港
+  - 美国
+  - 日本
+  - 新加坡
+  - 台湾
+  - 韩国
+  - 其他
 
 rules:
-  # 局域网
-  - GEOSITE,private,全球直连
+# 局域网
+- GEOSITE,private,全球直连
 
-  # 广告屏蔽
-  - GEOSITE,category-ads-all,广告屏蔽
+- GEOIP,private,全球直连
 
-  # Apple 中国服务
-  - GEOSITE,apple-cn,全球直连
+# Apple 中国服务
+- GEOSITE,apple-cn,全球直连
 
-  # 谷歌中国服务
-  - GEOSITE,google-cn,全球直连
-  
-  # 游戏直连服务
-  - GEOSITE,category-games@cn,全球直连
+# 谷歌中国服务
+- GEOSITE,google-cn,全球直连
 
-  # Steam 游戏服务器
-  - DOMAIN-SUFFIX,steamserver.net,全球直连
+# 游戏直连服务
+- GEOSITE,category-games@cn,全球直连
 
-  # 测速工具
-  - GEOSITE,category-speedtest,测速工具
+# Steam 游戏服务器
+- DOMAIN-SUFFIX,steamserver.net,全球直连
 
-  # 国外论坛
-  - GEOSITE,category-forums,国外论坛
+# 测速工具
+- GEOSITE,category-speedtest,测速工具
 
-    # 流媒体
-  - GEOSITE,youtube,YouTube
+# 国外论坛
+- GEOSITE,category-forums,国外论坛 # 流媒体
+- GEOSITE,youtube,YouTube # 大厂服务
+- GEOSITE,google,谷歌
 
-    # 大厂服务
-  - GEOSITE,google,谷歌
+# 国外 AI
+- GEOSITE,category-ai-!cn,国外AI
 
-  # 国外 AI
-  - GEOSITE,category-ai-!cn,国外AI
+# 开发平台
+- GEOSITE,category-dev,国外开发
 
-  # 开发平台
-  - GEOSITE,category-dev,国外开发
+# Zoom 会议
+- GEOSITE,zoom,Zoom
 
-  # Zoom 会议
-  - GEOSITE,zoom,Zoom
+# 游戏平台
+- GEOSITE,category-games,游戏平台
 
-  # 游戏平台
-  - GEOSITE,category-games,游戏平台
+# 流媒体服务
+- GEOSITE,netflix,Netflix
+- GEOSITE,tiktok,TikTok
+- GEOSITE,category-entertainment,国外娱乐
 
-  - GEOSITE,netflix,Netflix
-  - GEOSITE,tiktok,TikTok
-  - GEOSITE,category-entertainment,国外娱乐
+# 社交网络
+- GEOSITE,category-communication,社交通讯
+- GEOSITE,category-social-media-!cn,社交通讯
 
-  # 社交网络
-  - GEOSITE,category-communication,社交通讯
-  - GEOSITE,category-social-media-!cn,社交通讯
+- GEOSITE,apple,苹果
+- GEOSITE,microsoft,微软
 
-  - GEOSITE,apple,苹果
-  - GEOSITE,microsoft,微软
+# 国内兜底 (域名)
+- GEOSITE,cn,全球直连
 
-  # 国内兜底 (域名)
-  - GEOSITE,cn,全球直连
+# 国内兜底 (IP)
+- GEOIP,cn,全球直连
 
-  # 国内兜底 (IP)
-  - GEOIP,cn,全球直连
-
-  # 最终兜底
-  - MATCH,漏网之鱼
+# 最终兜底
+- MATCH,漏网之鱼
