@@ -31,12 +31,6 @@ proxy-groups:
   - 全球直连
   - 手动选择
   - 自建故转
-  - 香港负载
-  - 台湾负载
-  - 新加坡负载
-  - 日本负载
-  - 韩国负载
-  - 美国负载
   - 其他
 
 # 国外开发服务代理组
@@ -88,12 +82,6 @@ proxy-groups:
   - 全球直连
   - 手动选择
   - 自建故转
-  - 香港负载
-  - 台湾负载
-  - 新加坡负载
-  - 日本负载
-  - 韩国负载
-  - 美国负载
   - 其他
 
 # 微软代理组
@@ -285,61 +273,6 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
-
-# 负载均衡地区组 - 用于 AI/谷歌等需要 IP 稳定的服务
-- name: 香港负载
-  type: load-balance
-  strategy: consistent-hashing
-  include-all: true
-  filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HK.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-
-- name: 台湾负载
-  type: load-balance
-  strategy: consistent-hashing
-  include-all: true
-  filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/CN.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-
-- name: 新加坡负载
-  type: load-balance
-  strategy: consistent-hashing
-  include-all: true
-  filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-
-- name: 日本负载
-  type: load-balance
-  strategy: consistent-hashing
-  include-all: true
-  filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-
-- name: 韩国负载
-  type: load-balance
-  strategy: consistent-hashing
-  include-all: true
-  filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/KR.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-
-- name: 美国负载
-  type: load-balance
-  strategy: consistent-hashing
-  include-all: true
-  filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
 
 # 地区代理组 - 香港
 - name: 香港
