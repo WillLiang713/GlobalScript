@@ -31,6 +31,7 @@ proxy-groups:
   - 全球直连
   - 手动选择
   - 自建故转
+  - 美国故转
   - 其他
 
 # 国外开发服务代理组
@@ -82,6 +83,7 @@ proxy-groups:
   - 全球直连
   - 手动选择
   - 自建故转
+  - 美国故转
   - 其他
 
 # 微软代理组
@@ -270,6 +272,16 @@ proxy-groups:
   include-all: true
   filter: "(?i)自建"
   icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+
+# 美国故障转移代理组
+- name: 美国故转
+  type: fallback
+  include-all: true
+  filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
