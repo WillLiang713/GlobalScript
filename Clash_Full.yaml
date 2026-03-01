@@ -20,6 +20,28 @@ proxy-groups:
   interval: 300
   tolerance: 50
 
+# OpenAI 代理组
+- name: OpenAI
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 延迟优选
+  - 全球直连
+  - 手动选择
+  - 自建故转
+  - 美国故转
+  - 新加坡故转
+  - 日本故转
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
+
 # 国外AI服务代理组
 - name: 国外AI
   type: select
@@ -32,6 +54,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -52,6 +76,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -72,6 +98,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -92,6 +120,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -112,6 +142,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -132,6 +164,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -152,6 +186,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -172,6 +208,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -192,6 +230,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -212,6 +252,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -231,6 +273,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -251,6 +295,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -271,6 +317,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 台湾
   - 新加坡
@@ -305,6 +353,27 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
   icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+
+
+# 新加坡故障转移代理组
+- name: 新加坡故转
+  type: fallback
+  include-all: true
+  filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+
+# 日本故障转移代理组
+- name: 日本故转
+  type: fallback
+  include-all: true
+  filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -382,6 +451,8 @@ proxy-groups:
 - name: 全球直连
   type: select
   icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
   proxies:
   - DIRECT
 
@@ -397,6 +468,8 @@ proxy-groups:
   - 手动选择
   - 自建故转
   - 美国故转
+  - 新加坡故转
+  - 日本故转
   - 香港
   - 美国
   - 日本
@@ -427,9 +500,12 @@ rules:
 - GEOSITE,category-speedtest,测速工具
 
 # 国外论坛
-- GEOSITE,category-forums,国外论坛 # 流媒体
-- GEOSITE,youtube,YouTube # 大厂服务
+- GEOSITE,category-forums,国外论坛
+- GEOSITE,youtube,YouTube
 - GEOSITE,google,谷歌
+
+# OpenAI
+- GEOSITE,openai,OpenAI
 
 # 国外 AI
 - GEOSITE,category-ai-!cn,国外AI
