@@ -30,7 +30,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -42,61 +43,18 @@ proxy-groups:
   - 美国
   - 其他
 
-# 国外AI服务代理组
-- name: 国外AI
+# Anthropic 代理组
+- name: Anthropic
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
+  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/claude-ai.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
-
-# 国外开发服务代理组
-- name: 国外开发
-  type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 自建故转
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
-
-# 国外论坛代理组
-- name: 国外论坛
-  type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -118,7 +76,77 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
+  - 美国故转
+  - 新加坡故转
+  - 日本故转
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
+
+# 国外AI服务代理组
+- name: 国外AI
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 延迟优选
+  - 全球直连
+  - 手动选择
+  - 家宽原生
+  - 自建
+  - 美国故转
+  - 新加坡故转
+  - 日本故转
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
+
+# 国外开发服务代理组
+- name: 国外开发
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 延迟优选
+  - 全球直连
+  - 手动选择
+  - 家宽原生
+  - 自建
+  - 美国故转
+  - 新加坡故转
+  - 日本故转
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
+
+# 国外论坛代理组
+- name: 国外论坛
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 延迟优选
+  - 全球直连
+  - 手动选择
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -140,7 +168,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -162,7 +191,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -184,7 +214,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -206,7 +237,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -228,7 +260,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -250,7 +283,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -271,7 +305,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -293,7 +328,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -315,7 +351,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -335,11 +372,13 @@ proxy-groups:
   interval: 300
   proxies:
   - 手动选择
+  - 自建
+  - 家宽原生
   - 全球直连
 
-# 自建节点优选代理组
-- name: 自建故转
-  type: fallback
+# 自建节点代理组
+- name: 自建
+  type: select
   include-all: true
   filter: "(?i)自建"
   icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
@@ -357,7 +396,6 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
-
 
 # 新加坡故障转移代理组
 - name: 新加坡故转
@@ -378,6 +416,13 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+
+# 家宽原生节点代理组
+- name: 家宽原生
+  type: select
+  include-all: true
+  filter: "(?i)((家宽|住宅|residential|isp|broadband).*(原生|native))|((原生|native).*(家宽|住宅|residential|isp|broadband))"
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png"
 
 # 地区代理组 - 香港
 - name: 香港
@@ -468,7 +513,8 @@ proxy-groups:
   - 延迟优选
   - 全球直连
   - 手动选择
-  - 自建故转
+  - 家宽原生
+  - 自建
   - 美国故转
   - 新加坡故转
   - 日本故转
@@ -508,6 +554,9 @@ rules:
 
 # OpenAI
 - GEOSITE,openai,OpenAI
+
+# Anthropic
+- GEOSITE,anthropic,Anthropic
 
 # 国外 AI
 - GEOSITE,category-ai-!cn,国外AI
