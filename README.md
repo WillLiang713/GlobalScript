@@ -28,7 +28,7 @@
 **AI 平台**: OpenAI、Gemini  
 **开发工具**: GitHub、Microsoft  
 **流媒体**: Netflix、YouTube、国外媒体  
-**社交通讯**: Telegram、Twitter  
+**社交通讯**: Telegram、X(Twitter)  
 **游戏平台**: Steam、Epic、EA、PlayStation、Nintendo
 **测速工具**：Speedtest
 

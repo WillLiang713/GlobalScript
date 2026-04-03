@@ -89,6 +89,29 @@ proxy-groups:
   - 美国
   - 其他
 
+# X 代理组
+- name: X
+  type: select
+  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 延迟优选
+  - 全球直连
+  - 手动选择
+  - 家宽原生
+  - 自建
+  - 美国故转
+  - 新加坡故转
+  - 日本故转
+  - 香港
+  - 台湾
+  - 新加坡
+  - 日本
+  - 韩国
+  - 美国
+  - 其他
+
 # 国外AI服务代理组
 - name: 国外AI
   type: select
@@ -557,6 +580,9 @@ rules:
 
 # Anthropic
 - GEOSITE,anthropic,Anthropic
+
+# X
+- GEOSITE,x,X
 
 # 国外 AI
 - GEOSITE,category-ai-!cn,国外AI
