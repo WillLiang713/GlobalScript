@@ -32,5 +32,15 @@
 **游戏平台**: Steam、Epic、EA、PlayStation、Nintendo
 **测速工具**：Speedtest
 
+## License
+
+本项目以 [MIT License](./LICENSE) 发布。
+
+仓库内部分图标素材来自第三方开源项目，相关素材仍遵循其各自上游许可证：
+
+- `lucide-icons/lucide`：ISC License
+- `lipis/flag-icons`：MIT License
+- `glincker/thesvg`：MIT License
+
 ---
 *简单、高效、开箱即用*
