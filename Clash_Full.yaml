@@ -250,8 +250,8 @@ proxy-groups:
   - 美国节点
   - 其他节点
 
-# 视频会议代理组
-- name: 视频会议
+# Zoom 代理组
+- name: Zoom
   type: select
   icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/zoom.svg"
   url: https://cp.cloudflare.com/generate_204
@@ -616,8 +616,8 @@ rules:
 # 开发协作
 - GEOSITE,category-dev,开发协作
 
-# 视频会议
-- GEOSITE,zoom,视频会议
+# Zoom
+- GEOSITE,zoom,Zoom
 
 # 游戏平台
 - GEOSITE,category-games,游戏平台
