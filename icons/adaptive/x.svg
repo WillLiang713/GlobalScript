@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>X</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --plate: #f5f5f5;
+      --stroke: #d4d4d8;
+      --fg: #111827;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --plate: #18181b;
+        --stroke: #3f3f46;
+        --fg: #fafafa;
+      }
+    }
+  </style>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="var(--plate)" stroke="var(--stroke)" stroke-width="2" />
+  <path
+    fill="var(--fg)"
+    transform="translate(14.96 14.96) scale(1.42)"
+    d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"
+  />
+</svg>

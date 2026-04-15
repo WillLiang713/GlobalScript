@@ -3,19 +3,19 @@
 # 包含常用的分流规则和代理组配置
 
 proxy-groups:
-# 手动选择代理组 - 用户可以手动切换代理节点
-- name: 手动选择
+# 手动切换代理组 - 用户可以手动切换代理节点
+- name: 手动切换
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/manual-switch.svg"
   include-all: true
   url: https://cp.cloudflare.com/generate_204
   interval: 300
 
-# 自动选择代理组 - 根据延迟自动选择最优节点
-- name: 延迟优选
+# 智能优选代理组 - 根据延迟自动选择最优节点
+- name: 智能优选
   type: url-test
   include-all: true
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/smart-select.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -23,557 +23,580 @@ proxy-groups:
 # OpenAI 代理组
 - name: OpenAI
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/openai.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
 # Anthropic 代理组
 - name: Anthropic
   type: select
-  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/claude-ai.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/anthropic.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 谷歌代理组
-- name: 谷歌
+# Google 代理组
+- name: Google
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/google.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
 # X 代理组
 - name: X
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/x.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 国外AI服务代理组
-- name: 国外AI
+# AI 服务代理组
+- name: AI服务
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/ai-service.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 国外开发服务代理组
-- name: 国外开发
+# 开发协作代理组
+- name: 开发协作
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Stack.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/dev-collab.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 国外论坛代理组
-- name: 国外论坛
+# GitHub 代理组
+- name: GitHub
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Heart.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/github.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 微软代理组
-- name: 微软
+# 社区论坛代理组
+- name: 社区论坛
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/community.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 苹果代理组
-- name: 苹果
+# 微软服务代理组
+- name: 微软服务
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/microsoft.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# Zoom 视频会议代理组
-- name: Zoom
+# 苹果服务代理组
+- name: 苹果服务
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/apple.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
+
+# 视频会议代理组
+- name: 视频会议
+  type: select
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/zoom.svg"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
 # 游戏平台代理组
 - name: 游戏平台
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/gaming.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
 # YouTube 代理组
 - name: YouTube
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/youtube.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
 # Netflix 代理组
 - name: Netflix
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/netflix.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 美国节点
+  - 其他节点
 
 # TikTok 代理组
 - name: TikTok
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/tiktok.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 国外娱乐代理组
-- name: 国外娱乐
+# 流媒体代理组
+- name: 流媒体
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/streaming.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 社交通讯代理组
-- name: 社交通讯
+# 即时通讯代理组
+- name: 即时通讯
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/telegram.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 台湾
-  - 新加坡
-  - 日本
-  - 韩国
-  - 美国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 台湾节点
+  - 新加坡节点
+  - 日本节点
+  - 韩国节点
+  - 美国节点
+  - 其他节点
 
-# 测速工具代理组
-- name: 测速工具
+# 网络测速代理组
+- name: 网络测速
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/speedtest.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 手动选择
-  - 自建
-  - 家宽原生
-  - 全球直连
+  - 手动切换
+  - 自建节点
+  - 原生家宽
+  - 直接连接
 
 # 自建节点代理组
-- name: 自建
+- name: 自建节点
   type: select
   include-all: true
   filter: "(?i)自建"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/self-hosted.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
 
 # 美国故障转移代理组
-- name: 美国故转
+- name: 美国故障转移
   type: fallback
   include-all: true
   filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
   exclude-filter: "(?i)自建"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/us-failover.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
 
 # 新加坡故障转移代理组
-- name: 新加坡故转
+- name: 新加坡故障转移
   type: fallback
   include-all: true
   filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/sg-failover.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
 
 # 日本故障转移代理组
-- name: 日本故转
+- name: 日本故障转移
   type: fallback
   include-all: true
   filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/jp-failover.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
 
-# 家宽原生节点代理组
-- name: 家宽原生
+# 原生家宽节点代理组
+- name: 原生家宽
   type: select
   include-all: true
   filter: "(?i)((家宽|住宅|residential|isp|broadband).*(原生|native))|((原生|native).*(家宽|住宅|residential|isp|broadband))"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/native-home.svg"
 
 # 地区代理组 - 香港
-- name: 香港
+- name: 香港节点
   type: url-test
   include-all: true
   filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HK.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/hong-kong.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
 
 # 地区代理组 - 美国
-- name: 美国
+- name: 美国节点
   type: url-test
   include-all: true
   filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
   exclude-filter: "(?i)自建"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/US.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/usa.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
 
 # 地区代理组 - 日本
-- name: 日本
+- name: 日本节点
   type: url-test
   include-all: true
   filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JP.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/japan.svg"
   interval: 300
   tolerance: 50
 
 # 地区代理组 - 新加坡
-- name: 新加坡
+- name: 新加坡节点
   type: url-test
   include-all: true
   filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SG.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/singapore.svg"
   interval: 300
   tolerance: 50
 
 # 地区代理组 - 台湾
-- name: 台湾
+- name: 台湾节点
   type: url-test
   include-all: true
   filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/CN.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/china.svg"
   interval: 300
   tolerance: 50
 
 # 地区代理组 - 韩国
-- name: 韩国
+- name: 韩国节点
   type: url-test
   include-all: true
   filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/KR.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/korea.svg"
   interval: 300
   tolerance: 50
 
 # 其他地区代理组
-- name: 其他
+- name: 其他节点
   type: select
   include-all: true
   filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/other.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
 
 # 直连代理组
-- name: 全球直连
+- name: 直接连接
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/direct.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
   - DIRECT
 
-# 漏网之鱼代理组
-- name: 漏网之鱼
+# 兜底分流代理组
+- name: 兜底分流
   type: select
-  icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/fallback.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 延迟优选
-  - 全球直连
-  - 手动选择
-  - 家宽原生
-  - 自建
-  - 美国故转
-  - 新加坡故转
-  - 日本故转
-  - 香港
-  - 美国
-  - 日本
-  - 新加坡
-  - 台湾
-  - 韩国
-  - 其他
+  - 智能优选
+  - 直接连接
+  - 手动切换
+  - 原生家宽
+  - 自建节点
+  - 美国故障转移
+  - 新加坡故障转移
+  - 日本故障转移
+  - 香港节点
+  - 美国节点
+  - 日本节点
+  - 新加坡节点
+  - 台湾节点
+  - 韩国节点
+  - 其他节点
 
 rules:
 # 局域网
-- GEOSITE,private,全球直连
+- GEOSITE,private,直接连接
 
-- GEOIP,private,全球直连
+- GEOIP,private,直接连接
 
 # Apple 中国服务
-- GEOSITE,apple-cn,全球直连
+- GEOSITE,apple-cn,直接连接
 
 # 谷歌中国服务
-- GEOSITE,google-cn,全球直连
+- GEOSITE,google-cn,直接连接
 
 # 游戏直连服务
-- GEOSITE,category-games@cn,全球直连
+- GEOSITE,category-games@cn,直接连接
 
 # Steam 游戏服务器
-- DOMAIN-SUFFIX,steamserver.net,全球直连
+- DOMAIN-SUFFIX,steamserver.net,直接连接
 
 # 测速工具
-- GEOSITE,category-speedtest,测速工具
+- GEOSITE,category-speedtest,网络测速
 
-# 国外论坛
-- GEOSITE,category-forums,国外论坛
+# 社区论坛
+- GEOSITE,category-forums,社区论坛
 - GEOSITE,youtube,YouTube
-- GEOSITE,google,谷歌
+- GEOSITE,google,Google
 
 # OpenAI
 - GEOSITE,openai,OpenAI
@@ -584,14 +607,17 @@ rules:
 # X
 - GEOSITE,x,X
 
-# 国外 AI
-- GEOSITE,category-ai-!cn,国外AI
+# AI 服务
+- GEOSITE,category-ai-!cn,AI服务
 
-# 开发平台
-- GEOSITE,category-dev,国外开发
+# GitHub
+- GEOSITE,github,GitHub
 
-# Zoom 会议
-- GEOSITE,zoom,Zoom
+# 开发协作
+- GEOSITE,category-dev,开发协作
+
+# 视频会议
+- GEOSITE,zoom,视频会议
 
 # 游戏平台
 - GEOSITE,category-games,游戏平台
@@ -599,20 +625,20 @@ rules:
 # 流媒体服务
 - GEOSITE,netflix,Netflix
 - GEOSITE,tiktok,TikTok
-- GEOSITE,category-entertainment,国外娱乐
+- GEOSITE,category-entertainment,流媒体
 
-# 社交网络
-- GEOSITE,category-communication,社交通讯
-- GEOSITE,category-social-media-!cn,社交通讯
+# 即时通讯
+- GEOSITE,category-communication,即时通讯
+- GEOSITE,category-social-media-!cn,即时通讯
 
-- GEOSITE,apple,苹果
-- GEOSITE,microsoft,微软
+- GEOSITE,apple,苹果服务
+- GEOSITE,microsoft,微软服务
 
 # 国内兜底 (域名)
-- GEOSITE,cn,全球直连
+- GEOSITE,cn,直接连接
 
 # 国内兜底 (IP)
-- GEOIP,cn,全球直连
+- GEOIP,cn,直接连接
 
 # 最终兜底
-- MATCH,漏网之鱼
+- MATCH,兜底分流
