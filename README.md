@@ -40,7 +40,8 @@
 
 - `lucide-icons/lucide`：ISC License
 - `lipis/flag-icons`：MIT License
-- `glincker/thesvg`：MIT License
+- `homarr-labs/dashboard-icons`：MIT License
+- `simple-icons/simple-icons`：CC0 1.0 Universal
 
 ---
 *简单、高效、开箱即用*

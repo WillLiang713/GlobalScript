@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>zoom</title>
+  <defs>
+    <linearGradient id="plate" x1="12" x2="52" y1="10" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e7edf5" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#0f172a" flood-opacity="0.14" />
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#plate)" stroke="#cbd5e1" stroke-width="1.5" />
+  </g>
+  <svg x="15.5" y="15.5" width="33" height="33" viewBox="0 0 512 512" xml:space="preserve"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0 0 114.6 0 256s114.6 256 256 256" style="fill:#2196f3"/><path d="M150.2 329.2h169.3V205c0-18.7-15.2-33.9-33.9-33.9H116.4v124.2c0 18.7 15.1 33.9 33.8 33.9M342.1 284l67.7 45.1v-158l-67.7 45.2z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/></svg>
+</svg>
