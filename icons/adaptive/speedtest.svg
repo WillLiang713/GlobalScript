@@ -6,19 +6,39 @@
       --plate: #f5f5f5;
       --stroke: #d4d4d8;
       --fg: #111827;
+      --badge-stroke: rgba(17, 24, 39, 0.12);
+      --accent: #f97316;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --plate: #18181b;
         --stroke: #3f3f46;
         --fg: #fafafa;
+        --badge-stroke: rgba(250, 250, 250, 0.14);
+        --accent: #fb923c;
       }
     }
-  </style>
+    .theme-dark {
+      display: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      .theme-light {
+        display: none;
+      }
+      .theme-dark {
+        display: inline;
+      }
+    }
+</style>
   <rect x="6" y="6" width="52" height="52" rx="14" fill="var(--plate)" stroke="var(--stroke)" stroke-width="2" />
-  <path
-    fill="var(--fg)"
-    transform="translate(15.2 15.2) scale(1.4)"
-    d="M11.628 16.186l-2.047-2.14 6.791-5.953 1.21 1.302zm8.837 6.047c2.14-2.14 3.535-5.117 3.535-8.466 0-6.604-5.395-12-12-12s-12 5.396-12 12c0 3.35 1.302 6.326 3.535 8.466l1.674-1.675c-1.767-1.767-2.79-4.093-2.79-6.79A9.568 9.568 0 0 1 12 4.185a9.568 9.568 0 0 1 9.581 9.581c0 2.605-1.116 5.024-2.79 6.791Z"
-  />
+  
+  <svg x="16" y="16" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--fg)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    
+      <path d="M12 15.5 16.5 11"/>
+      <path d="M19.4 18.2A9.5 9.5 0 1 0 4.6 18.2"/>
+      <path d="M8 18h.01"/>
+      <path d="M12 18h.01"/>
+      <path d="M16 18h.01"/>
+    
+  </svg>
 </svg>

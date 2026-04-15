@@ -1,19 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title>Zoom</title>
+  <title>zoom</title>
   <style>
     :root {
       color-scheme: light dark;
       --plate: #f5f5f5;
       --stroke: #d4d4d8;
+      --fg: #111827;
+      --badge-stroke: rgba(17, 24, 39, 0.12);
+      --accent: #f97316;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --plate: #18181b;
         --stroke: #3f3f46;
+        --fg: #fafafa;
+        --badge-stroke: rgba(250, 250, 250, 0.14);
+        --accent: #fb923c;
       }
     }
-  </style>
+    .theme-dark {
+      display: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      .theme-light {
+        display: none;
+      }
+      .theme-dark {
+        display: inline;
+      }
+    }
+</style>
   <rect x="6" y="6" width="52" height="52" rx="14" fill="var(--plate)" stroke="var(--stroke)" stroke-width="2" />
-  <circle cx="32" cy="32" r="16" fill="#0B5CFF" />
-  <path fill="#fff" d="M23.8 27.2h10.2c1.6 0 2.8 1.2 2.8 2.8v7.9c0 1.6-1.2 2.8-2.8 2.8H23.8c-1.5 0-2.8-1.2-2.8-2.8V30c0-1.6 1.3-2.8 2.8-2.8Zm14.7 4.3 4.8-3.4c.8-.6 1.7 0 1.7.9v10c0 .9-.9 1.5-1.7.9l-4.8-3.4v-4.9Z"/>
+  <svg x="15.5" y="15.5" width="33" height="33" viewBox="0 0 512 512" xml:space="preserve"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0 0 114.6 0 256s114.6 256 256 256" style="fill:#2196f3"/><path d="M150.2 329.2h169.3V205c0-18.7-15.2-33.9-33.9-33.9H116.4v124.2c0 18.7 15.1 33.9 33.8 33.9M342.1 284l67.7 45.1v-158l-67.7 45.2z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/></svg>
 </svg>

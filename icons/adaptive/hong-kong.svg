@@ -1,8 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-hk" viewBox="0 0 640 480">
-  <path fill="#EC1B2E" d="M0 0h640v480H0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>hong-kong</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --plate: #f5f5f5;
+      --stroke: #d4d4d8;
+      --fg: #111827;
+      --badge-stroke: rgba(17, 24, 39, 0.12);
+      --accent: #f97316;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --plate: #18181b;
+        --stroke: #3f3f46;
+        --fg: #fafafa;
+        --badge-stroke: rgba(250, 250, 250, 0.14);
+        --accent: #fb923c;
+      }
+    }
+    .theme-dark {
+      display: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      .theme-light {
+        display: none;
+      }
+      .theme-dark {
+        display: inline;
+      }
+    }
+</style>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="var(--plate)" stroke="var(--stroke)" stroke-width="2" />
+  
+  <defs>
+    <clipPath id="flag-badge">
+      <rect x="14" y="16" width="36" height="32" rx="8" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#flag-badge)">
+    <svg x="14" y="16" width="36" height="32" viewBox="0 0 640 480" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#EC1B2E" d="M0 0h640v480H0"/>
   <path id="hk-a" fill="#fff" d="M346.3 103.1C267 98 230.6 201.9 305.6 240.3c-26-22.4-20.6-55.3-10.1-72.4l1.9 1.1c-13.8 23.5-11.2 52.7 11.1 71-12.7-12.3-9.5-39 12.1-48.9s23.6-39.3 16.4-49.1q-14.7-25.6 9.3-38.9M307.9 164l-4.7 7.4-1.8-8.6-8.6-2.3 7.8-4.3-.6-8.9 6.5 6.1 8.3-3.3-3.7 8.1 5.6 6.8z"/>
   <use xlink:href="#hk-a" transform="rotate(72 312.5 243.5)"/>
   <use xlink:href="#hk-a" transform="rotate(144 312.5 243.5)"/>
   <use xlink:href="#hk-a" transform="rotate(216 312.5 243.5)"/>
-  <use xlink:href="#hk-a" transform="rotate(288 312.5 243.5)"/>
+  <use xlink:href="#hk-a" transform="rotate(288 312.5 243.5)"/></svg>
+  </g>
+  <rect x="14" y="16" width="36" height="32" rx="8" fill="none" stroke="var(--badge-stroke)" stroke-width="1.25" />
 </svg>

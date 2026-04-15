@@ -1,24 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title>X</title>
+  <title>x</title>
   <style>
     :root {
       color-scheme: light dark;
       --plate: #f5f5f5;
       --stroke: #d4d4d8;
       --fg: #111827;
+      --badge-stroke: rgba(17, 24, 39, 0.12);
+      --accent: #f97316;
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --plate: #18181b;
         --stroke: #3f3f46;
         --fg: #fafafa;
+        --badge-stroke: rgba(250, 250, 250, 0.14);
+        --accent: #fb923c;
       }
     }
-  </style>
+    .theme-dark {
+      display: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      .theme-light {
+        display: none;
+      }
+      .theme-dark {
+        display: inline;
+      }
+    }
+</style>
   <rect x="6" y="6" width="52" height="52" rx="14" fill="var(--plate)" stroke="var(--stroke)" stroke-width="2" />
-  <path
-    fill="var(--fg)"
-    transform="translate(14.96 14.96) scale(1.42)"
-    d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"
-  />
+  
+  <g class="theme-light">
+    <svg x="17" y="17" width="30" height="30" viewBox="0 0 512 512" xml:space="preserve"><path d="M304.7 216.8 495.2 0h-45.1L284.6 188.2 152.6 0H.2l199.7 284.7L.2 512h45.1L220 313.2 359.4 512h152.3M61.6 33.3h69.3l319.1 447h-69.3"/></svg>
+  </g>
+  <g class="theme-dark">
+    <svg x="17" y="17" width="30" height="30" viewBox="0 0 512 512" xml:space="preserve"><path fill="#f2f2f2" d="M304.7 216.8 495.2 0h-45.1L284.6 188.2 152.6 0H.2l199.7 284.7L.2 512h45.1L220 313.2 359.4 512h152.3M61.6 33.3h69.3l319.1 447h-69.3"/></svg>
+  </g>
 </svg>

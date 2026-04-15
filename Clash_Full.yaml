@@ -438,7 +438,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
   exclude-filter: "(?i)自建"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/us-failover.svg"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/usa.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -448,7 +448,7 @@ proxy-groups:
   type: fallback
   include-all: true
   filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/sg-failover.svg"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/singapore.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -458,7 +458,7 @@ proxy-groups:
   type: fallback
   include-all: true
   filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/jp-failover.svg"
+  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/adaptive/japan.svg"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
