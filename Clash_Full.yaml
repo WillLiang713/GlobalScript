@@ -2,6 +2,12 @@
 # 适用于 OpenClash 和 Clash 核心
 # 包含常用的分流规则和代理组配置
 
+# 启用统一延迟计算方式，去除握手等额外延迟
+unified-delay: true
+
+# 启用 TCP 并发连接，可提高连接建立速度
+tcp-concurrent: true
+
 proxy-groups:
 # 手动切换代理组 - 用户可以手动切换代理节点
 - name: 手动切换
