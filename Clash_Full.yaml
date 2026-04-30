@@ -573,22 +573,22 @@ proxy-groups:
   - 其他节点
 
 rules:
-# 局域网
+# 局域网 / 私有地址
 - GEOSITE,private,直接连接
+- GEOIP,private,直接连接,no-resolve
 
-- GEOIP,private,直接连接
-
-# Apple 中国服务
+# 中国大陆可直连的境外厂商服务
 - GEOSITE,apple-cn,直接连接
-
-# 谷歌中国服务
 - GEOSITE,google-cn,直接连接
 
-# 游戏直连服务
+# 游戏国区 / 国内接入点
 - GEOSITE,category-games@cn,直接连接
 
 # Steam 游戏服务器
 - DOMAIN-SUFFIX,steamserver.net,直接连接
+
+# 中国大陆顶级域名
+- GEOSITE,tld-cn,直接连接
 
 # 测速工具
 - GEOSITE,category-speedtest,网络测速
@@ -634,11 +634,14 @@ rules:
 - GEOSITE,apple,苹果服务
 - GEOSITE,microsoft,微软服务
 
+# 非中国大陆域名兜底
+- GEOSITE,geolocation-!cn,兜底分流
+
 # 国内兜底 (域名)
 - GEOSITE,cn,直接连接
 
 # 国内兜底 (IP)
-- GEOIP,cn,直接连接
+- GEOIP,CN,直接连接
 
 # 最终兜底
 - MATCH,兜底分流
