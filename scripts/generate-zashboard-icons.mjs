@@ -126,21 +126,19 @@ const flagIcons = {
   "usa.svg": "us",
 };
 
-const visibleOnDark = "#f8fafc";
-
 const brandIcons = {
-  "anthropic.svg": { source: "simple", name: "anthropic", size: 42, color: visibleOnDark },
-  "apple.svg": { source: "dashboard", name: "apple", size: 43, color: visibleOnDark },
-  "github.svg": { source: "dashboard", name: "github", size: 43, color: visibleOnDark },
-  "google.svg": { source: "dashboard", name: "google", size: 46 },
-  "microsoft.svg": { source: "dashboard", name: "microsoft", size: 45 },
-  "netflix.svg": { source: "dashboard", name: "netflix", size: 43 },
-  "openai.svg": { source: "dashboard", name: "openai", size: 45, color: visibleOnDark },
-  "telegram.svg": { source: "dashboard", name: "telegram", size: 46 },
-  "tiktok.svg": { source: "dashboard", name: "tiktok", size: 45 },
-  "x.svg": { source: "dashboard", name: "x", size: 42, color: visibleOnDark },
-  "youtube.svg": { source: "dashboard", name: "youtube", size: 46 },
-  "zoom.svg": { source: "dashboard", name: "zoom", size: 46 },
+  "anthropic.svg": { source: "simple", name: "anthropic", size: 30 },
+  "apple.svg": { source: "dashboard", name: "apple", size: 31 },
+  "github.svg": { source: "dashboard", name: "github", size: 31 },
+  "google.svg": { source: "dashboard", name: "google", size: 33 },
+  "microsoft.svg": { source: "dashboard", name: "microsoft", size: 32 },
+  "netflix.svg": { source: "dashboard", name: "netflix", size: 31 },
+  "openai.svg": { source: "dashboard", name: "openai", size: 32 },
+  "telegram.svg": { source: "dashboard", name: "telegram", size: 33 },
+  "tiktok.svg": { source: "dashboard", name: "tiktok", size: 32 },
+  "x.svg": { source: "dashboard", name: "x", size: 30 },
+  "youtube.svg": { source: "dashboard", name: "youtube", size: 33 },
+  "zoom.svg": { source: "dashboard", name: "zoom", size: 33 },
 };
 
 function extractSvg(svgText) {
@@ -183,17 +181,21 @@ function nestedSvg({ viewBox, body, x, y, size, extra = "" }) {
   return `<svg x="${x}" y="${y}" width="${size}" height="${size}" viewBox="${viewBox}" ${attrs}>${body}</svg>`;
 }
 
-function recolorMonochrome(body, color) {
-  return body
-    .replace(/fill:\s*#[0-9a-fA-F]{3,8}/gi, `fill:${color}`)
-    .replace(/stroke:\s*#[0-9a-fA-F]{3,8}/gi, `stroke:${color}`)
-    .replace(/\sfill="(?!none|currentColor)[^"]*"/gi, ` fill="${color}"`)
-    .replace(/\sstroke="(?!none|currentColor)[^"]*"/gi, ` stroke="${color}"`);
-}
-
-function iconCanvas(title, content) {
+function shell(title, content) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="${title}">
   <title>${title}</title>
+  <defs>
+    <linearGradient id="plate" x1="12" x2="52" y1="10" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e7edf5" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#0f172a" flood-opacity="0.14" />
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#plate)" stroke="#cbd5e1" stroke-width="1.5" />
+  </g>
   ${content}
 </svg>
 `;
@@ -201,41 +203,47 @@ function iconCanvas(title, content) {
 
 function makeUtilitySvg(name, { title, body }) {
   const content = `
-  <svg x="12" y="12" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="${visibleOnDark}" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+  <svg x="16" y="16" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
     ${body}
   </svg>`;
 
-  return [`${name}.svg`, iconCanvas(title, content)];
+  return [`${name}.svg`, shell(title, content)];
 }
 
 function makeFlagSvg(fileName, { viewBox, inner }) {
   const title = fileName.replace(".svg", "");
   const content = `
-  <svg x="8" y="14" width="48" height="36" viewBox="${viewBox}" xmlns:xlink="http://www.w3.org/1999/xlink">${inner}</svg>`;
+  <defs>
+    <clipPath id="flag-badge">
+      <rect x="14" y="16" width="36" height="32" rx="8" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#flag-badge)">
+    <svg x="14" y="16" width="36" height="32" viewBox="${viewBox}" xmlns:xlink="http://www.w3.org/1999/xlink">${inner}</svg>
+  </g>
+  <rect x="14" y="16" width="36" height="32" rx="8" fill="none" stroke="#d7dee8" stroke-width="1.25" />`;
 
-  return [fileName, iconCanvas(title, content)];
+  return [fileName, shell(title, content)];
 }
 
 function makeBrandSvg(fileName, source) {
   const title = fileName.replace(".svg", "");
   const size = source.size ?? 32;
   const offset = (64 - size) / 2;
-  const brandColor = source.color;
-  const body = brandColor ? recolorMonochrome(source.regular.inner, brandColor) : source.regular.inner;
 
   if (source.source === "simple") {
     const simpleAttrs = source.regular.outerAttrs.replace(/\s*fill="[^"]*"/i, "");
     return [
       fileName,
-      iconCanvas(
+      shell(
         title,
         nestedSvg({
           viewBox: source.regular.viewBox,
-          body,
+          body: source.regular.inner,
           x: offset,
           y: offset,
           size,
-          extra: `${simpleAttrs} fill="currentColor" color="${brandColor ?? visibleOnDark}"`.trim(),
+          extra: `${simpleAttrs} fill="currentColor" color="#111827"`.trim(),
         }),
       ),
     ];
@@ -243,15 +251,15 @@ function makeBrandSvg(fileName, source) {
 
   return [
     fileName,
-    iconCanvas(
+    shell(
       title,
       nestedSvg({
         viewBox: source.regular.viewBox,
-        body,
+        body: source.regular.inner,
         x: offset,
         y: offset,
         size,
-        extra: `${source.regular.outerAttrs} ${brandColor ? `fill="${brandColor}" color="${brandColor}"` : ""}`.trim(),
+        extra: source.regular.outerAttrs,
       }),
     ),
   ];
