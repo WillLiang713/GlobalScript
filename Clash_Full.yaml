@@ -6,7 +6,7 @@ proxy-groups:
 # 手动切换代理组 - 用户可以手动切换代理节点
 - name: 手动切换
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/manual-switch.png"
+  icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Manual.png"
   include-all: true
   url: https://cp.cloudflare.com/generate_204
   interval: 300
@@ -15,7 +15,7 @@ proxy-groups:
 - name: 智能优选
   type: url-test
   include-all: true
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/smart-select.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -23,7 +23,7 @@ proxy-groups:
 # OpenAI 代理组
 - name: OpenAI
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/openai.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -46,7 +46,7 @@ proxy-groups:
 # Anthropic 代理组
 - name: Anthropic
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/anthropic.png"
+  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/anthropic.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -69,7 +69,7 @@ proxy-groups:
 # Google 代理组
 - name: Google
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/google.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -92,7 +92,7 @@ proxy-groups:
 # X 代理组
 - name: X
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/x.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -115,7 +115,7 @@ proxy-groups:
 # AI 服务代理组
 - name: AI服务
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/ai-service.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -138,7 +138,7 @@ proxy-groups:
 # 开发协作代理组
 - name: 开发协作
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/dev-collab.png"
+  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/terminal.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -161,7 +161,7 @@ proxy-groups:
 # GitHub 代理组
 - name: GitHub
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/github.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -184,7 +184,7 @@ proxy-groups:
 # 社区论坛代理组
 - name: 社区论坛
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/community.png"
+  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/hard-forum.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -207,7 +207,7 @@ proxy-groups:
 # 微软服务代理组
 - name: 微软服务
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/microsoft.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -230,7 +230,7 @@ proxy-groups:
 # 苹果服务代理组
 - name: 苹果服务
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/apple.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -253,7 +253,7 @@ proxy-groups:
 # Zoom 代理组
 - name: Zoom
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/zoom.png"
+  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zoom.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -276,7 +276,7 @@ proxy-groups:
 # 游戏平台代理组
 - name: 游戏平台
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/gaming.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -299,7 +299,7 @@ proxy-groups:
 # YouTube 代理组
 - name: YouTube
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/youtube.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -322,7 +322,7 @@ proxy-groups:
 # Netflix 代理组
 - name: Netflix
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/netflix.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -344,7 +344,7 @@ proxy-groups:
 # TikTok 代理组
 - name: TikTok
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/tiktok.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -367,7 +367,7 @@ proxy-groups:
 # 流媒体代理组
 - name: 流媒体
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/streaming.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -390,7 +390,7 @@ proxy-groups:
 # 即时通讯代理组
 - name: 即时通讯
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/telegram.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -413,7 +413,7 @@ proxy-groups:
 # 网络测速代理组
 - name: 网络测速
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/speedtest.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -427,7 +427,7 @@ proxy-groups:
   type: select
   include-all: true
   filter: "(?i)自建"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/self-hosted.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -438,7 +438,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
   exclude-filter: "(?i)自建"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/usa.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -448,7 +448,7 @@ proxy-groups:
   type: fallback
   include-all: true
   filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/singapore.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -458,7 +458,7 @@ proxy-groups:
   type: fallback
   include-all: true
   filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/japan.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -468,14 +468,14 @@ proxy-groups:
   type: select
   include-all: true
   filter: "(?i)((家宽|住宅|residential|isp|broadband).*(原生|native))|((原生|native).*(家宽|住宅|residential|isp|broadband))"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/native-home.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WiFi.png"
 
 # 地区代理组 - 香港
 - name: 香港节点
   type: url-test
   include-all: true
   filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/hong-kong.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -486,7 +486,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇺🇸|美|US|USA|United ?States|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|Portland|Dallas|Oregon|Phoenix|Fremont|Silicon Valley|Las Vegas|Los Angeles|San Jose|Santa Clara|Seattle|Chicago"
   exclude-filter: "(?i)自建"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/usa.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
@@ -497,7 +497,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/japan.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"
   interval: 300
   tolerance: 50
 
@@ -507,7 +507,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/singapore.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png"
   interval: 300
   tolerance: 50
 
@@ -517,7 +517,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/china.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png"
   interval: 300
   tolerance: 50
 
@@ -527,7 +527,7 @@ proxy-groups:
   include-all: true
   filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
   url: https://cp.cloudflare.com/generate_204
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/korea.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png"
   interval: 300
   tolerance: 50
 
@@ -536,14 +536,14 @@ proxy-groups:
   type: select
   include-all: true
   filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/other.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
 
 # 直连代理组
 - name: 直接连接
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/direct.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
@@ -552,7 +552,7 @@ proxy-groups:
 # 兜底分流代理组
 - name: 兜底分流
   type: select
-  icon: "https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/icons/zashboard/fallback.png"
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
