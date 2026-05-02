@@ -10,9 +10,9 @@ mkdir -p "$OUT_DIR"
 npx --yes sharp-cli \
   -i "$SRC_DIR"/*.svg \
   -o "$OUT_DIR" \
-  --density 288 \
+  --density 576 \
   -f png \
   --compressionLevel 9 \
   --effort 6 \
   --palette \
-  resize 256 256
+  resize 512 512
