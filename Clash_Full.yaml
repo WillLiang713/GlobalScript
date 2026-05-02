@@ -178,6 +178,7 @@ proxy-groups:
   type: url-test
   include-all: true
   filter: "(?i)🇭🇰|港|HK|HKG|HongKong|Hong Kong|香港"
+  exclude-filter: "(?i)自建"
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
@@ -199,6 +200,7 @@ proxy-groups:
   type: url-test
   include-all: true
   filter: "(?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|Tokyo|Osaka"
+  exclude-filter: "(?i)自建"
   url: https://cp.cloudflare.com/generate_204
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"
   interval: 300
@@ -209,6 +211,7 @@ proxy-groups:
   type: url-test
   include-all: true
   filter: "(?i)🇸🇬|SG|SGP|Singapore|新加坡|狮城"
+  exclude-filter: "(?i)自建"
   url: https://cp.cloudflare.com/generate_204
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png"
   interval: 300
@@ -219,6 +222,7 @@ proxy-groups:
   type: url-test
   include-all: true
   filter: "(?i)🇹🇼|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet"
+  exclude-filter: "(?i)自建"
   url: https://cp.cloudflare.com/generate_204
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png"
   interval: 300
@@ -229,6 +233,7 @@ proxy-groups:
   type: url-test
   include-all: true
   filter: "(?i)🇰🇷|韩|KR|Korea|韩国|首尔|Seoul"
+  exclude-filter: "(?i)自建"
   url: https://cp.cloudflare.com/generate_204
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png"
   interval: 300
@@ -239,6 +244,7 @@ proxy-groups:
   type: select
   include-all: true
   filter: "^(?!.*(港|HK|HKG|HongKong|Hong Kong|美|US|USA|United States|美国|洛杉矶|Los Angeles|圣何塞|San Jose|硅谷|日本|JP|Japan|东京|Tokyo|大阪|Osaka|新加坡|SG|SGP|Singapore|狮城|台|TW|Taiwan|台湾|台灣|台北|Taipei|桃園|Taoyuan|HiNet|韩|KR|Korea|韩国|首尔|Seoul)).*"
+  exclude-filter: "(?i)自建"
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
