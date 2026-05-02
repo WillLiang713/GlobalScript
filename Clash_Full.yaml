@@ -184,7 +184,7 @@ proxy-groups:
 # 社区论坛代理组
 - name: 社区论坛
   type: select
-  icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/hard-forum.png"
+  icon: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Speech%20balloon/3D/speech_balloon_3d.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
