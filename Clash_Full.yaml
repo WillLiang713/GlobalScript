@@ -268,13 +268,14 @@ rules:
 - GEOSITE,apple-cn,直接连接
 - GEOSITE,google-cn,直接连接
 
-
-
 # 中国大陆顶级域名
 - GEOSITE,tld-cn,直接连接
 
 # 测速工具
 - GEOSITE,category-speedtest,网络测速
+
+# 游戏平台
+- GEOSITE,category-games,直接连接
 
 # 流媒体服务
 - GEOSITE,category-entertainment,流媒体
@@ -290,9 +291,6 @@ rules:
 
 # Zoom
 - GEOSITE,zoom,Zoom
-
-# 游戏平台（交给客户端加速器处理，全部直连）
-- GEOSITE,category-games,直接连接
 
 # 即时通讯
 - GEOSITE,category-communication,即时通讯
