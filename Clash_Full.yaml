@@ -96,24 +96,6 @@ proxy-groups:
   - 美国节点
   - 其他节点
 
-# 游戏平台代理组
-- name: 游戏平台
-  type: select
-  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  proxies:
-  - 智能优选
-  - 直接连接
-  - 手动切换
-  - 自建节点
-  - 香港节点
-  - 台湾节点
-  - 新加坡节点
-  - 日本节点
-  - 韩国节点
-  - 美国节点
-  - 其他节点
 
 # 流媒体代理组
 - name: 流媒体
@@ -286,11 +268,7 @@ rules:
 - GEOSITE,apple-cn,直接连接
 - GEOSITE,google-cn,直接连接
 
-# 游戏国区 / 国内接入点
-- GEOSITE,category-games@cn,直接连接
 
-# Steam 游戏服务器
-- DOMAIN-SUFFIX,steamserver.net,直接连接
 
 # 中国大陆顶级域名
 - GEOSITE,tld-cn,直接连接
@@ -313,8 +291,8 @@ rules:
 # Zoom
 - GEOSITE,zoom,Zoom
 
-# 游戏平台
-- GEOSITE,category-games,游戏平台
+# 游戏平台（交给客户端加速器处理，全部直连）
+- GEOSITE,category-games,直接连接
 
 # 即时通讯
 - GEOSITE,category-communication,即时通讯
