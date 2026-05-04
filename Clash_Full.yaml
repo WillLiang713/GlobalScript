@@ -3,6 +3,25 @@
 # 精简分流：国内/局域网/游戏直连，其他流量统一进入「代理出口」
 
 proxy-groups:
+# 统一代理出口 - 国外流量和最终兜底都进入这里，放在最前方便面板快速选择
+- name: 代理出口
+  type: select
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 智能优选
+  - 手动切换
+  - 自建节点
+  - 香港节点
+  - 美国节点
+  - 日本节点
+  - 新加坡节点
+  - 台湾节点
+  - 韩国节点
+  - 其他节点
+  - DIRECT
+
 # 手动切换代理组 - 用户可以手动切换代理节点
 - name: 手动切换
   type: select
@@ -105,25 +124,6 @@ proxy-groups:
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
-
-# 统一代理出口 - 国外流量和最终兜底都进入这里
-- name: 代理出口
-  type: select
-  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"
-  url: https://cp.cloudflare.com/generate_204
-  interval: 300
-  proxies:
-  - 智能优选
-  - 手动切换
-  - 自建节点
-  - 香港节点
-  - 美国节点
-  - 日本节点
-  - 新加坡节点
-  - 台湾节点
-  - 韩国节点
-  - 其他节点
-  - DIRECT
 
 rules:
 # 局域网 / 私有地址
