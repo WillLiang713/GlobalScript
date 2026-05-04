@@ -1,36 +1,117 @@
 # GlobalScript
 
-精简强大的 Clash 代理配置方案，专为 Clash Meta / Mihomo 优化，一份配置搞定所有分流需求。
+GlobalScript 是一份面向 Clash Meta / Mihomo 的精简分流模板。它不追求把每个服务都拆成独立策略组，而是采用更易维护的主线逻辑：**国内与游戏直连，其他非中国大陆流量统一进入代理出口，同时保留地区节点选择能力**。
 
-## 核心文件
+## 配置文件
 
-- **[Clash_Full.yaml](https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml)** - 模板配置文件（不含节点），基于 Geodata 优化
+- [`Clash_Full.yaml`](https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml)：主配置模板，不包含任何代理节点。
 
-## 功能特性
+> 这是模板配置，不是完整订阅。你需要搭配自己的节点订阅、配置合并功能或手动添加 `proxies` 后使用。
 
-- ✅ **Meta 优化** - 完美适配 Clash Meta / Mihomo 内核，采用内置 GEOSITE/GEOIP 规则
-- ✅ **智能分流** - 涵盖 OpenAI、Gemini、GitHub、Netflix 等主流服务
-- ✅ **地区分组** - 自动按香港、美国、日本、新加坡、台湾、韩国等地区分类节点
-- ✅ **自动测速** - 各地区节点自动进行延迟测试并选择最优线路
-- ✅ **精简高效** - 移除冗余 Rule Providers，启动速度极快
+## 设计思路
 
-## 快速开始
+### 1. 分流规则保持极简
 
-`Clash_Full.yaml` 只是**模板**，不包含任何节点信息，不能作为订阅直接使用。
+规则层只负责区分几类核心流量：
 
-### 推荐方式：下载模板后与节点合并
-1. 下载 `Clash_Full.yaml` 到你的 Clash 客户端配置目录
-2. 在客户端中导入你的订阅节点，或手动把节点加入此配置（`proxies:` 或客户端的配置合并功能）
-3. 选中该配置并启用即可使用
+- 局域网 / 私有地址：`DIRECT`
+- 中国大陆相关域名与 IP：`DIRECT`
+- Apple CN / Google CN：中国大陆可直连服务走 `DIRECT`
+- 游戏平台：强制 `DIRECT`，避免与游戏加速器冲突
+- 非中国大陆域名：统一进入 `代理出口`
+- 最终兜底：统一进入 `代理出口`
 
-## 支持的服务
+这样可以避免 Google、AI、流媒体、开发工具、社交通讯等服务各自拆组导致的选择负担。
 
-**AI 平台**: OpenAI、Gemini  
-**开发工具**: GitHub、Microsoft  
-**流媒体**: Netflix、YouTube、国外媒体  
-**社交通讯**: Telegram、X(Twitter)  
-**游戏平台**: Steam、Epic、EA、PlayStation、Nintendo
-**测速工具**：Speedtest
+### 2. 出口选择集中到「代理出口」
+
+`代理出口` 是日常最主要的策略组，并被放在代理组列表最前面，方便在 Zashboard / Yacd / MetaCubeXD 等面板中快速选择。
+
+可选出口包括：
+
+- 智能优选
+- 手动切换
+- 自建节点
+- 香港节点
+- 美国节点
+- 日本节点
+- 新加坡节点
+- 台湾节点
+- 韩国节点
+- 其他节点
+- DIRECT
+
+也就是说，**服务不再分组，但地区出口仍然保留**。如果需要临时切换到香港、日本、美国等地区，只需要在 `代理出口` 中选择对应地区即可。
+
+### 3. 地区节点自动分类
+
+配置通过 `include-all`、`filter` 和 `exclude-filter` 自动从已有节点中筛选地区节点：
+
+- 香港节点
+- 美国节点
+- 日本节点
+- 新加坡节点
+- 台湾节点
+- 韩国节点
+- 其他节点
+- 自建节点
+
+地区组使用 `url-test` 自动测速，适合需要快速选择相对可用线路的场景。
+
+## 当前分流逻辑
+
+```yaml
+rules:
+# 局域网 / 私有地址
+- GEOSITE,private,DIRECT
+- GEOIP,private,DIRECT,no-resolve
+
+# 中国大陆可直连的境外厂商服务
+- GEOSITE,apple-cn,DIRECT
+- GEOSITE,google-cn,DIRECT
+
+# 游戏平台：必须直连，避免和游戏加速器冲突
+- GEOSITE,category-games,DIRECT
+
+# 非中国大陆域名统一走代理出口
+- GEOSITE,geolocation-!cn,代理出口
+
+# 国内兜底 (域名)
+- GEOSITE,cn,DIRECT
+
+# 国内兜底 (IP)
+- GEOIP,CN,DIRECT
+
+# 最终兜底
+- MATCH,代理出口
+```
+
+## 快速使用
+
+1. 下载 [`Clash_Full.yaml`](https://raw.githubusercontent.com/WillLiang713/GlobalScript/main/Clash_Full.yaml)。
+2. 将你的节点订阅与该模板合并，或手动补充节点信息。
+3. 使用支持 Clash Meta / Mihomo 规则语法的客户端加载配置。
+4. 打开控制面板，在 `代理出口` 中选择自动、手动、自建或指定地区出口。
+
+## 适合人群
+
+这个配置适合希望：
+
+- 国内流量稳定直连
+- 国外流量统一代理
+- 游戏流量不被代理接管
+- 面板中减少服务类策略组
+- 仍然可以按地区选择代理出口
+- 配置规则清晰、少维护、容易排错
+
+如果你需要对 AI、流媒体、开发工具、社交通讯等服务分别指定不同节点，可以在此模板基础上自行添加对应策略组和规则。
+
+## 注意事项
+
+- 本配置依赖客户端内置或已下载的 `GEOSITE` / `GEOIP` 数据。
+- `Clash_Full.yaml` 不包含节点，直接导入不会产生可用代理。
+- 游戏相关流量默认直连，适合搭配 UU、迅游等游戏加速器使用。
+- 如果某些节点名称无法被地区规则识别，可以调整对应地区组的 `filter`。
 
 ## License
 
@@ -44,4 +125,5 @@
 - `simple-icons/simple-icons`：CC0 1.0 Universal
 
 ---
-*简单、高效、开箱即用*
+
+简单分流，集中选择，保留地区自由度。
