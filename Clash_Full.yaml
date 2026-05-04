@@ -22,6 +22,16 @@ proxy-groups:
   - 其他节点
   - DIRECT
 
+# 网络测速代理组 - 单独管理测速流量
+- name: 网络测速
+  type: select
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 手动切换
+  - 自建节点
+
 # 手动切换代理组 - 用户可以手动切换代理节点
 - name: 手动切换
   type: select
@@ -133,6 +143,9 @@ rules:
 # 中国大陆可直连的境外厂商服务
 - GEOSITE,apple-cn,DIRECT
 - GEOSITE,google-cn,DIRECT
+
+# 测速工具
+- GEOSITE,category-speedtest,网络测速
 
 # 游戏平台：必须直连，避免和游戏加速器冲突
 - GEOSITE,category-games,DIRECT
