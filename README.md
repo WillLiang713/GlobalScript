@@ -66,15 +66,14 @@ rules:
 - GEOSITE,private,DIRECT
 - GEOIP,private,DIRECT,no-resolve
 
-# 中国大陆可直连的境外厂商服务
-- GEOSITE,apple-cn,DIRECT
-- GEOSITE,google-cn,DIRECT
+# 游戏平台：国内服务和下载/CDN直连
+- GEOSITE,category-games-cn,DIRECT
+- GEOSITE,category-games@cn,DIRECT
+- GEOSITE,category-game-platforms-download,游戏下载
+- GEOSITE,category-games,游戏平台
 
-# 游戏平台：必须直连，避免和游戏加速器冲突
-- GEOSITE,category-games,DIRECT
-
-# 非中国大陆域名统一走代理出口
-- GEOSITE,geolocation-!cn,代理出口
+# GFW 域名优先代理，避免被后续 GEOIP 规则直连
+- GEOSITE,gfw,代理出口
 
 # 国内兜底 (域名)
 - GEOSITE,cn,DIRECT
