@@ -150,7 +150,7 @@ rules:
 
 # 游戏平台：国内服务和下载/CDN直连
 - GEOSITE,category-games-cn,DIRECT
-- GEOSITE,category-games@cn,DIRECT
+- GEOSITE,category-games-!cn@cn,DIRECT
 - GEOSITE,category-game-platforms-download@cn,DIRECT
 
 # 游戏平台：其他服务走代理，避免商店打不开
