@@ -149,7 +149,6 @@ rules:
 - GEOIP,private,DIRECT,no-resolve
 
 # 游戏平台：国内服务和下载/CDN直连
-- GEOSITE,category-games-cn,DIRECT
 - GEOSITE,category-games-!cn@cn,DIRECT
 - GEOSITE,category-game-platforms-download@cn,DIRECT
 
