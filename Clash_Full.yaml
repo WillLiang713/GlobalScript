@@ -221,7 +221,7 @@ rules:
 - GEOSITE,category-entertainment,流媒体
 
 # 网络测速：可在面板中切换到代理、指定地区或直连测速
-- GEOSITE,speedtest,网络测速
+- GEOSITE,category-speedtest,网络测速
 
 # GFW 域名优先代理，避免被后续 GEOIP 规则直连
 - GEOSITE,gfw,代理出口
