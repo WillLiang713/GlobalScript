@@ -10,7 +10,7 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - 智能优选
+  - 自动测速
   - 手动切换
   - 自建节点
   - 香港节点
@@ -22,23 +22,62 @@ proxy-groups:
   - 其他节点
   - DIRECT
 
-# 游戏平台 - 默认直连，商店打不开时可手动切到代理出口
+# AI 出口 - 海外 AI 服务统一进入这里，方便固定更稳定的出口
+- name: AI出口
+  type: select
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 自动测速
+  - 手动切换
+  - 自建节点
+  - 香港节点
+  - 美国节点
+  - 日本节点
+  - 新加坡节点
+  - 台湾节点
+  - 韩国节点
+  - 其他节点
+  - DIRECT
+
+# 流媒体 - 视频、音乐、直播等娱乐服务统一进入这里，方便按地区切换
+- name: 流媒体
+  type: select
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 自动测速
+  - 手动切换
+  - 自建节点
+  - 香港节点
+  - 美国节点
+  - 日本节点
+  - 新加坡节点
+  - 台湾节点
+  - 韩国节点
+  - 其他节点
+  - DIRECT
+
+# 游戏平台 - 保留独立入口，商店打不开时可手动切到代理出口或指定地区
 - name: 游戏平台
   type: select
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png"
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   proxies:
-  - DIRECT
-  - 代理出口
-  - 智能优选
+  - 自动测速
   - 手动切换
+  - 自建节点
   - 香港节点
+  - 美国节点
   - 日本节点
   - 新加坡节点
   - 台湾节点
   - 韩国节点
-  - 美国节点
+  - 其他节点
+  - DIRECT
 
 # 手动切换代理组 - 用户可以手动切换代理节点
 - name: 手动切换
@@ -48,8 +87,8 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: 300
 
-# 智能优选代理组 - 根据延迟自动选择最优节点
-- name: 智能优选
+# 自动测速代理组 - 根据测试 URL 和延迟自动选择节点
+- name: 自动测速
   type: url-test
   include-all: true
   icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png"
@@ -152,9 +191,15 @@ rules:
 - GEOSITE,category-games-!cn@cn,DIRECT
 - GEOSITE,category-game-platforms-download@cn,DIRECT
 
-# 游戏平台：其他服务走代理，避免商店打不开
+# 游戏平台：其他服务走游戏平台组，保留手动切换能力
 - GEOSITE,category-game-platforms-download,游戏平台
 - GEOSITE,category-games-!cn,游戏平台
+
+# AI 服务：统一进入 AI 出口
+- GEOSITE,category-ai-!cn,AI出口
+
+# 流媒体 / 娱乐服务：统一进入流媒体组
+- GEOSITE,category-entertainment,流媒体
 
 # GFW 域名优先代理，避免被后续 GEOIP 规则直连
 - GEOSITE,gfw,代理出口
