@@ -98,6 +98,44 @@ proxy-groups:
   - 其他节点
   - DIRECT
 
+# 微软服务 - Microsoft、OneDrive、Office、Windows 更新等普通微软服务
+- name: 微软服务
+  type: select
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 自动测速
+  - 手动切换
+  - 自建节点
+  - 香港节点
+  - 美国节点
+  - 日本节点
+  - 新加坡节点
+  - 台湾节点
+  - 韩国节点
+  - 其他节点
+  - DIRECT
+
+# 开发工具 - GitHub、代码托管、包管理器、开发文档等 category-dev 流量
+- name: 开发工具
+  type: select
+  icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  proxies:
+  - 自动测速
+  - 手动切换
+  - 自建节点
+  - 香港节点
+  - 美国节点
+  - 日本节点
+  - 新加坡节点
+  - 台湾节点
+  - 韩国节点
+  - 其他节点
+  - DIRECT
+
 # 游戏平台 - 保留独立入口，商店打不开时可手动切到代理出口或指定地区
 - name: 游戏平台
   type: select
@@ -239,9 +277,13 @@ rules:
 # 流媒体 / 娱乐服务：统一进入流媒体组
 - GEOSITE,category-entertainment,流媒体
 
-# Google / Apple 服务：用于普通品牌服务和商店地区控制
+# Google / Apple / Microsoft 服务：用于普通品牌服务和商店地区控制
 - GEOSITE,google,谷歌服务
 - GEOSITE,apple,苹果服务
+- GEOSITE,microsoft,微软服务
+
+# 开发工具：代码托管、包管理器、开发文档等进入开发工具组
+- GEOSITE,category-dev,开发工具
 
 # GFW 域名优先代理，避免被后续 GEOIP 规则直连
 - GEOSITE,gfw,代理出口
