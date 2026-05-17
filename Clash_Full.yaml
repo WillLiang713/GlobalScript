@@ -285,13 +285,13 @@ rules:
 # 流媒体 / 娱乐服务：统一进入流媒体组
 - GEOSITE,category-entertainment,流媒体
 
+# 开发工具：代码托管、包管理器、开发文档等进入开发工具组
+- GEOSITE,category-dev,开发工具
+
 # Google / Apple / Microsoft 服务：用于普通品牌服务和商店地区控制
 - GEOSITE,google,谷歌服务
 - GEOSITE,apple,苹果服务
 - GEOSITE,microsoft,微软服务
-
-# 开发工具：代码托管、包管理器、开发文档等进入开发工具组
-- GEOSITE,category-dev,开发工具
 
 # GFW 域名优先代理，避免被后续 GEOIP 规则直连
 - GEOSITE,gfw,代理出口
