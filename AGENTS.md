@@ -9,6 +9,7 @@ This repository is a compact Clash Meta / Mihomo configuration template project.
 - `demo/` stores example Clash YAML files used for reference and manual comparison.
 - `ruleset/` is reserved for external or generated rule-set assets if they are added later.
 - `README.md` documents user-facing behavior and should be updated when routing logic changes.
+- `LICENSE` covers this repository's own template and script content; remotely referenced icons, demo rules, and other third-party resources remain under their upstream terms.
 
 ## Build, Test, and Development Commands
 
@@ -21,7 +22,7 @@ There is no package manager manifest and no generated build step. Use lightweigh
 
 ## Coding Style & Naming Conventions
 
-Keep YAML indentation at two spaces and group rules by routing intent, with short comments explaining each block. Preserve established Chinese strategy-group names such as `代理出口`, `游戏平台`, and `游戏下载` unless a routing change requires renaming them. In JavaScript, use two-space indentation, semicolons, `const`/`let`, and small helper functions as shown in `scripts/convert.js`. Prefer descriptive argument aliases and avoid changing existing aliases unless backward compatibility is intentionally broken.
+Keep YAML indentation at two spaces and group rules by routing intent, with short comments explaining each block. Preserve established Chinese strategy-group names such as `代理出口`, `AI出口`, `流媒体`, `谷歌服务`, `苹果服务`, `微软服务`, `开发工具`, and `游戏平台` unless a routing change requires renaming them. Top-level scenario `select` groups should keep a consistent candidate order and use `include-all: true` so each scenario can directly select a concrete node without adding one-off duplicate groups such as `开发自建节点`. In JavaScript, use two-space indentation, semicolons, `const`/`let`, and small helper functions as shown in `scripts/convert.js`. Prefer descriptive argument aliases and avoid changing existing aliases unless backward compatibility is intentionally broken.
 
 ## Testing Guidelines
 
@@ -39,4 +40,4 @@ Pull requests should describe the routing or script behavior changed, list valid
 
 ## Security & Configuration Tips
 
-Do not commit personal proxy nodes, subscription URLs, credentials, API tokens, or generated configs containing private endpoints. Keep `Clash_Full.yaml` as a reusable public template.
+Do not commit personal proxy nodes, subscription URLs, credentials, API tokens, or generated configs containing private endpoints. Keep `Clash_Full.yaml` as a reusable public template. Do not vendor third-party icon assets or rulesets unless their license and attribution requirements are checked and documented; remote icon references currently point mainly to `Koolson/Qure` and `Orz-3/mini`.
